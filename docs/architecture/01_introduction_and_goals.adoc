@@ -1,0 +1,41 @@
+[[section-introduction-and-goals]]
+== Introduction and Goals
+
+Delivering my resume build with web technologies.
+
+=== Requirements Overview
+
+==== R1 - Display Resume Information
+
+**Recruiters and potential employers must** be able to **see** the **usual information** found on a resume:
+
+- Picture
+- Short description (about me)
+- Contact information
+- Skills
+- Certificates
+- Job history
+- Education history
+- Private Projects
+- Other interests
+
+==== R2 - PDF Export
+
+**Recruiters and potential employers must** be able to **export** the <<R1 - Display Resume Information, core information of the resume>> as a **PDF** with one click on a Button. 
+
+=== Quality Goals
+
+This project should give a learning and showcase opportunity for skills needed for web development.
+
+==== Q1 - Styling can be changed quickly (Maintainability)
+
+**Changing the styling** (font, colors, borders, shadows) of the resume **must** take **less than 1 man-day**.
+
+==== Q2 - Quick visual feedback during update (Maintainability)
+
+**Updating the content** of the resume, the updated styled resume **must be visible** locally in **less than 5 seconds**.
+
+=== Stakeholders
+
+https://www.linkedin.com/in/tobias-belch[Tobias Belch] (Owner and Developer)
+

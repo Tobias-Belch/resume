@@ -1,0 +1,11 @@
+[[section-architecture-constraints]]
+== Architecture Constraints
+
+=== C1 - Development Cost
+
+**Development** of the resume application (ignoring the completed content) **must** take **less than 3 man-days** and **must cost no money**.
+
+=== C2 - Operational Cost
+
+**Deploying** and **hosting** the resume **must cost no money**.
+
