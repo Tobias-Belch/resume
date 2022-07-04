@@ -14,6 +14,3 @@ Template Revision: 8.0 EN (based on asciidoc), February 2022
 
 (C)
 We acknowledge that this document uses material from the arc 42 architecture template, https://arc42.org.
-
-// horizontal line
-***
