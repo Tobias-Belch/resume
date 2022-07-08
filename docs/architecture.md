@@ -17,7 +17,14 @@
       - [4.2.1. Context](#421-context)
       - [4.2.2. Decision](#422-decision)
       - [4.2.3. Status](#423-status)
+    - [4.3. ADR 3: Extending JSON Resume Schema](#43-adr-3-extending-json-resume-schema)
+      - [4.3.1. Context](#431-context)
+      - [4.3.2. Decision](#432-decision)
+        - [JSON Resume Changes](#json-resume-changes)
+      - [4.3.3. Status](#433-status)
+      - [4.3.4. Consequences](#434-consequences)
   - [5. Risks and Technical Debts](#5-risks-and-technical-debts)
+  - [6. Domain Language](#6-domain-language)
 
 ## 1. Introduction and Goals
 
@@ -25,10 +32,13 @@ Delivering my resume build with web technologies, giving me an opportunity to le
 
 ### 1.1. Requirements Overview
 
-| ID  | Title                      | Details                                                                                                                                                                                                                                                                                                                                                        |
-| --- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| R1  | Display Resume Information | <div><div>**Recruiters and potential employers must** be able to **see** the **usual information** found on a resume:</div><ul><li>Picture</li><li>Short description (about me)</li><li>Contact information</li><li>Skills</li><li>Certificates</li><li>Job history</li><li>Education history</li><li>Private Projects</li><li>Other interests</li></ul></div> |
-| R2  | PDF Export                 | **Recruiters and potential employers must** be able to **export** the core information of the resume as a **PDF** with one click on a Button.                                                                                                                                                                                                                  |
+| ID  | Title                                        | Details                                                                                                                                                                                                                                                                                                                                                        |
+| --- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R1  | Display Resume Information                   | <div><div>**Recruiters and potential employers must** be able to **see** the **usual information** found on a resume:</div><ul><li>Picture</li><li>Short description (about me)</li><li>Contact information</li><li>Skills</li><li>Certificates</li><li>Job history</li><li>Education history</li><li>Private Projects</li><li>Other interests</li></ul></div> |
+| R2  | Print Resume                                 | **Recruiters and potential employers must** be able to **print** the resume                                                                                                                                                                                                                                                                                    |
+| R3  | Allow multiple intro texts                   | **Resume writers must** be able to add **multiple summaries**, to set up different sections, instead of just one intro text                                                                                                                                                                                                                                    |
+| R4  | Enable project lists within the work entries | **Resume writers can** connect their projects with their work entries, because **recruiters and potential employers** want to know more about the projects worked on for the different companies.                                                                                                                                                              |
+| R5  | Enable skills lists within work entries      | **Resume writers can** add skills to their work entries, because **recruiters and potential employers** want to see which skills where used at which job.                                                                                                                                                                                                      |
 
 ### 1.2. Quality Goals
 
@@ -106,6 +116,43 @@ This decision leans into the [quality goal, to learn new skills](#12-quality-goa
 
 _accepted_
 
+### 4.3. ADR 3: Extending JSON Resume Schema
+
+#### 4.3.1. Context
+
+- [R1 - Display Resume Information](#11-requirements-overview)
+- [R3 - Display Resume Information](#11-requirements-overview)
+- [R4 - Display Resume Information](#11-requirements-overview)
+- [R5 - Display Resume Information](#11-requirements-overview)
+- [C1 - No Development Costs](#2-architecture-constraints)
+
+#### 4.3.2. Decision
+
+[JSON Resume](https://jsonresume.org/) is a somewhat known [JSON Schema](https://jsonresume.org/schema/) and a collection of tools to [build resumes quickly](https://jsonresume.org/getting-started/). It covers almost every datum we need for this resume. It helps that there is a plugin that let's you [export your linkedin profile](https://chrome.google.com/webstore/detail/json-resume-exporter/caobgmmcpklomkcckaenhjlokpmfbdec) into JSON Resume. This speeds up the gathering of data and the decision making process of how to structure our resume data.
+
+While we'll make heavy use of JSON Resume and focus on staying true to their schema, we'll need a few extensions to fulfill every functional requirement (R3, R4, R5).
+
+##### JSON Resume Changes
+
+| Attribute                                                                 | In JSON Resume               | Description                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `summary = string \| [{ title: string, content: string }]`                | `summary = string `          | Enables summary sections                                                                                                                                                                                                                                                                         |
+| `skills[].level = "beginner" \| "intermediate" \| "advanced" \| "master"` | `skills[].level = string`    | Manifests the level of the particular skill                                                                                                                                                                                                                                                      |
+| `skills[].entities = [string]`                                            |                              | Enables skills connected with work entries, while `skills[].entities` contains all connected `work[].name`.                                                                                                                                                                                      |
+| `langues[].fluency = "A" \| "B" \| "C" \| "native"`                       | `langues[].fluency = string` | Alines the level with other skills, while `A = beginner`, `B = intermediate`, `C = advanced` and `native = expert`. Based on [Common European Framework of Reference for Languages](https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels). |
+| `education[].summary = string`                                            |                              | Enables describing that education experience.                                                                                                                                                                                                                                                    |
+
+#### 4.3.3. Status
+
+_accepted_
+
+#### 4.3.4. Consequences
+
+If JSON Resume ever changes its schema, we might want to adapt to those changes. This could create development cost down the road. But ultimately, the compatbility with JSON Resume schema is just an offer to make it easier to integrate content. This resume is not bound to JSON Resume for any other reason than convenience.
+
 ## 5. Risks and Technical Debts
 
 1. Users with older Browsers, like the Internet Explorer, will have a decreased user experience ([ADR 1: CSS Vars for Theming](#414-consequences))
+2. We might want to invest more development time down the road, in case the JSON Resume schema is changed. ([ADR3: Extending JSON Resume Schema](#434-consequences))
+
+## 6. Domain Language
