@@ -1,0 +1,42 @@
+---
+import Section from "@components/Section.astro";
+import { Skill } from "@schemas/Resume";
+
+export type Props = { skills: Skill[] };
+
+const { skills } = Astro.props as Props;
+---
+
+<Section title="Skills">
+  <div>
+    {skills.map(({ name, level }) => <span class={level}>{name}</span>)}
+  </div>
+</Section>
+
+<style>
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-l);
+    font-weight: 400;
+  }
+
+  .beginner {
+    font-size: 0.83rem;
+  }
+
+  .intermediate {
+    font-size: 1.17rem;
+  }
+
+  .advanced {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .expert {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+</style>
