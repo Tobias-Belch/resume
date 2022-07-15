@@ -8,10 +8,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "broadcast:preview": "npx localtunnel --port 3001"
+    "broadcast:preview": "npx localtunnel --port 3001",
+    "lint": "eslint --ext .js,.ts,.astro src",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.70"
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "astro": "^1.0.0-beta.70",
+    "eslint": "^8.19.0",
+    "eslint-plugin-astro": "^0.15.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.1.1"
   },
   "dependencies": {
     "zod": "^3.17.3"

@@ -2,24 +2,26 @@ import { z } from "zod";
 
 const profileSchema = z.object({
   network: z.string(),
-  url: z.string().url()
+  url: z.string().url(),
 });
 
 export type Profile = z.infer<typeof profileSchema>;
 
-const summaryObjectSchema = z.object({ title: z.string(), content: z.string() });
+const summaryObjectSchema = z.object({
+  title: z.string(),
+  content: z.string(),
+});
 
 type SummaryObject = z.infer<typeof summaryObjectSchema>;
 
-const summarySchema = z.union([
-  z.string(),
-  summaryObjectSchema
-]);
+const summarySchema = z.union([z.string(), summaryObjectSchema]);
 
 export type Summary = z.infer<typeof summarySchema>;
 
 export function isSummaryObject(summary: Summary): summary is SummaryObject {
-  return typeof summary === "object" && "title" in summary && "content" in summary;
+  return (
+    typeof summary === "object" && "title" in summary && "content" in summary
+  );
 }
 
 const basicsSchema = z.object({
@@ -28,7 +30,7 @@ const basicsSchema = z.object({
   summary: z.union([summarySchema, z.array(summarySchema)]),
   image: z.optional(z.string()),
   url: z.optional(z.string().url()),
-  profiles: z.optional(z.array(profileSchema))
+  profiles: z.optional(z.array(profileSchema)),
 });
 
 export type Basics = z.infer<typeof basicsSchema>;
@@ -39,7 +41,7 @@ const certificateSchema = z.object({
   name: z.string(),
   issuer: z.string(),
   startDate: dateStringSchema,
-  url: z.optional(z.string().url())
+  url: z.optional(z.string().url()),
 });
 
 export type Certificate = z.infer<typeof certificateSchema>;
@@ -51,21 +53,21 @@ const educationSchema = z.object({
   score: z.string(),
   startDate: dateStringSchema,
   endDate: z.optional(dateStringSchema),
-  summary: z.optional(z.string())
-})
+  summary: z.optional(z.string()),
+});
 
 export type Education = z.infer<typeof educationSchema>;
 
 const languageSchema = z.object({
   language: z.string(),
-  fluency: z.enum(["A", "B", "C", "native"])
+  fluency: z.enum(["A", "B", "C", "native"]),
 });
 
 export type Language = z.infer<typeof languageSchema>;
 
 const skillSchema = z.object({
   name: z.string(),
-  level: z.enum(["beginner", "intermediate", "advanced", "expert"])
+  level: z.enum(["beginner", "intermediate", "advanced", "expert"]),
 });
 
 export type Skill = z.infer<typeof skillSchema>;
@@ -79,7 +81,7 @@ const workSchema = z.object({
   highlights: z.optional(z.array(z.string())),
   location: z.optional(z.string()),
   skills: z.optional(z.array(z.string())),
-  url: z.optional(z.string().url())
+  url: z.optional(z.string().url()),
 });
 
 export type Work = z.infer<typeof workSchema>;
@@ -90,7 +92,7 @@ export const resumeSchema = z.object({
   education: z.optional(z.array(educationSchema)),
   languages: z.optional(z.array(languageSchema)),
   skills: z.optional(z.array(skillSchema)),
-  work: z.optional(z.array(workSchema))
+  work: z.optional(z.array(workSchema)),
 });
 
 export type Resume = z.infer<typeof resumeSchema>;

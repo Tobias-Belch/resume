@@ -23,9 +23,7 @@ const { name, label, image, profiles = [], url } = Astro.props as Props;
       <h4>{label}</h4>
     </div>
     <div class="links">
-      {profiles.map(({ network, url }) => (
-      <a href={url}>{network}</a>
-      ))}
+      {profiles.map(({ network, url }) => <a href={url}>{network}</a>)}
       {url && <a href={url}>website</a>}
     </div>
   </div>
@@ -44,11 +42,11 @@ const { name, label, image, profiles = [], url } = Astro.props as Props;
     background-color: var(--color-background);
   }
 
-  .header>* {
+  .header > * {
     height: 100%;
   }
 
-  .header>.content {
+  .header > .content {
     flex-grow: 2;
   }
 
@@ -67,11 +65,11 @@ const { name, label, image, profiles = [], url } = Astro.props as Props;
     gap: var(--spacing-m);
   }
 
-  .title>h1 {
+  .title > h1 {
     font-weight: 700;
   }
 
-  .title>h4 {
+  .title > h4 {
     font-weight: 500;
   }
 

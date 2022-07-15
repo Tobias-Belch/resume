@@ -1,12 +1,12 @@
 :root {
-  --color-primary: #3F2B37;
+  --color-primary: #3f2b37;
 
   --color-background: #ffffff;
   --color-foreground: var(--color-primary);
-  --color-foreground-light: #8A8B83;
-  --color-highlight: #FFE04B;
+  --color-foreground-light: #8a8b83;
+  --color-highlight: #ffe04b;
   --color-highlight-contast: var(--color-primary);
-  --color-link: #4343CC;
+  --color-link: #4343cc;
 
   --spacing-xs: 0.125rem;
   --spacing-s: 0.25rem;

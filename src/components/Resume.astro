@@ -5,7 +5,10 @@ import Skills from "./Skills.astro";
 import Summary from "./Summary.astro";
 
 export type Props = Resume;
-const { basics: { summary, ...basics }, skills } = Astro.props as Props;
+const {
+  basics: { summary, ...basics },
+  skills,
+} = Astro.props as Props;
 
 const summaries = Array.isArray(summary) ? summary : [summary];
 ---
@@ -16,12 +19,9 @@ const summaries = Array.isArray(summary) ? summary : [summary];
   </div>
 
   <div class="sections">
-    {summaries.map((summary) => (
-    <Summary summary={summary} />
-    ))}
+    {summaries.map((summary) => <Summary summary={summary} />)}
 
-    {skills &&
-    <Skills skills={skills} /> }
+    {skills && <Skills skills={skills} />}
   </div>
 </main>
 
