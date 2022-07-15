@@ -2,6 +2,7 @@
   "name": "resume",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://tobias-belch.github.io/resume",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
