@@ -1,0 +1,92 @@
+:root {
+  --color-primary: #3F2B37;
+
+  --color-background: #ffffff;
+  --color-foreground: var(--color-primary);
+  --color-foreground-light: #8A8B83;
+  --color-highlight: #FFE04B;
+  --color-highlight-contast: var(--color-primary);
+  --color-link: #4343CC;
+
+  --spacing-xs: 0.125rem;
+  --spacing-s: 0.25rem;
+  --spacing-m: 0.5rem;
+  --spacing-l: 0.75rem;
+  --spacing-xl: 1rem;
+  --spacing-xxl: 1.75rem;
+
+  --font-size-s: 14px;
+  --font-size-m: 18px;
+  --font-size-l: 24px;
+
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: system-ui, sans-serif;
+  font-size: var(--font-size-s);
+}
+
+@media only screen and (min-width: 672px) {
+  :root {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  :root {
+    font-size: var(--font-size-l);
+  }
+}
+
+@media only screen and (min-width: 1296px) {
+  :root {
+    font-size: var(--font-size-l);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}

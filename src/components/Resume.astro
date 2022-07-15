@@ -1,0 +1,41 @@
+---
+import Header from "@components/Header.astro";
+import { Resume } from "@schemas/Resume";
+import Skills from "./Skills.astro";
+import Summary from "./Summary.astro";
+
+export type Props = Resume;
+const { basics: { summary, ...basics }, skills } = Astro.props as Props;
+
+const summaries = Array.isArray(summary) ? summary : [summary];
+---
+
+<main>
+  <div class="sticky-header">
+    <Header {...basics} />
+  </div>
+
+  <div class="sections">
+    {summaries.map((summary) => (
+    <Summary summary={summary} />
+    ))}
+
+    {skills &&
+    <Skills skills={skills} /> }
+  </div>
+</main>
+
+<style>
+  .sticky-header {
+    position: fixed;
+    width: 100%;
+  }
+
+  .sections {
+    padding: var(--spacing-xxl);
+    padding-top: calc(var(--header-height) + var(--spacing-xxl));
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
+  }
+</style>
