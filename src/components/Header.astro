@@ -13,12 +13,6 @@ type Profile = {
 };
 
 const { name, label, image, profiles = [], url } = Astro.props as Props;
-
-const urls = [...profiles.map(({ url }) => url), url].filter(Boolean) as string[];
-const urlsWithoutDuplicates = [...new Set(urls)];
-
-const prettifyUrlExp = /^(?:http(?:s)?:\/\/)?(?:www.)?(.*)$/;
-const prettifyUrl = (url: string) => prettifyUrlExp.exec(url)?.[1] ?? url;
 ---
 
 <section class="header">
@@ -29,9 +23,10 @@ const prettifyUrl = (url: string) => prettifyUrlExp.exec(url)?.[1] ?? url;
       <h4>{label}</h4>
     </div>
     <div class="links">
-      {urlsWithoutDuplicates.map((url) => (
-      <a href={url}>{prettifyUrl(url)}</a>
+      {profiles.map(({ network, url }) => (
+      <a href={url}>{network}</a>
       ))}
+      {url && <a href={url}>website</a>}
     </div>
   </div>
 </section>
@@ -91,6 +86,12 @@ const prettifyUrl = (url: string) => prettifyUrlExp.exec(url)?.[1] ?? url;
   @media only screen and (min-width: 990px) {
     .links {
       gap: var(--spacing-s);
+    }
+  }
+
+  @media print {
+    a::after {
+      content: " (" attr(href) ") ";
     }
   }
 </style>
