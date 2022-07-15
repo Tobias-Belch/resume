@@ -12,8 +12,8 @@
   --spacing-s: 0.25rem;
   --spacing-m: 0.5rem;
   --spacing-l: 0.75rem;
-  --spacing-xl: 1rem;
-  --spacing-xxl: 1.75rem;
+  --spacing-xl: 1.25rem;
+  --spacing-xxl: 2rem;
 
   --font-size-s: 14px;
   --font-size-m: 18px;
@@ -41,16 +41,6 @@
   :root {
     font-size: var(--font-size-l);
   }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 a {
@@ -89,4 +79,10 @@ h5 {
 
 h6 {
   font-size: 0.67rem;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-inline-start: var(--spacing-xxl);
 }

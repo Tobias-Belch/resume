@@ -37,8 +37,19 @@
       "name": "eHealth-Tec GmbH",
       "position": "Technical Lead",
       "startDate": "2020-04-30",
-      "highlights": [],
-      "summary": "Digitalising the german health system, by improving the experience for patients, doctors and pharmacists.\n\nProjects:\n- White-Label online Pharmacy (TypeScript, React, Next.js, NestJS, REST)\n- Veordnungssoftware (PVS integrated prescription creation) (Software Architecture)\n- Browser based e-prescription creation for doctors (TypeScript, React, Material-UI)\n\nMy Focal Points:\n- Bulding User Interfaces with React, Next.js and TypeScript\n- Developing Backend for Frontends as Anti Corruption Layers with Node.js and NestJS\n- Mentoring and onboarding colleagues\n- Achieving transparent and efficient communication between the Team and Stakeholders\n- Driving a Requirements based Software Architecture and Development process",
+      "highlights": [
+        "Bulding User Interfaces with React, Next.js and TypeScript",
+        "Developing Backend for Frontends as Anti Corruption Layers with Node.js and NestJS",
+        "Mentoring and onboarding colleagues",
+        "Achieving transparent and efficient communication between the Team and Stakeholders",
+        "Driving a Requirements based Software Architecture and Development process"
+      ],
+      "summary": "Digitalising the german health system, by improving the experience for patients, doctors and pharmacists.",
+      "projects": [
+        "White-Label online Pharmacy (TypeScript, React, Next.js, NestJS, REST)",
+        "Veordnungssoftware (PVS integrated prescription creation) (Software Architecture)",
+        "Browser based e-prescription creation for doctors (TypeScript, React, Material-UI)]"
+      ],
       "url": "https://www.linkedin.com/company/ehealth-tec/",
       "location": "Berlin, Deutschland",
       "skills": [
@@ -66,8 +77,18 @@
       "position": "Development Lead",
       "startDate": "2018-09-30",
       "endDate": "2020-04-30",
-      "highlights": [],
-      "summary": "Medtower UG develops soft- and hardware solutions to make tasks in hospitals more transparent and productive.\n\nProject: Medtower Radar\nWith the combination of the self devloped IoT hard- and software, the Medtower Radar enables hospital employees to observe and react to position and status changes of devices, like beds and wheelchairs for optimising work processes.\n\nMy Focal Points:\n- Development of interactive mockups with React\n- Architecture of the backend and frontend\n- Design of domains, APIs and microservices\n- Communication with AMQP 1.0 and Apache Qpid Message Broker\n- Providing data in real time to the frontend with AMQP 1.0\n- Providing the geo and map specific information in an offline environment with OpenMapTiles Server\n- Development of Node.js microservices with TypeScript, Express and MongoDB\n- Development of the frontend with TypeScript and React\n- AMQP 1.0 communication with rhea.js\n- State management with Context API and Render Prop Components\n- Styling with SCSS and Bulma\n- 3D indoor map with d3-geo and mapbox-gl\n- 360 degree panorama pictures with pannellum-react\n- Orchestrating module with Docker Compose\n- Mentoring and coaching of coworkers\n\nProject: Individual ETL Solutions\nDesign and implementation of individual ETL solutions with Apache NIFI, Apache Flink and Node.js, for supporting customers with data migration, transformation and reporting tasks.\n\nMy Focal Points:\n- Development of ETL processes with Apache NIFI, Apache Flink, Node.js, SQL, CSV, JSON and MongoDB\n- Management of the external work of a Apache NIFI consulting company",
+      "highlights": [
+        "Driving the architecture and development of Node.js microservices and SPA",
+        "Building realtime communication with AMQP 1.0 and Apache Qpid Message Broker",
+        "Providing the geo and map specific information in an offline environment with OpenMapTiles Server",
+        "Mentoring and coaching of coworkers",
+        "Management of the external work of a Apache NIFI consulting company"
+      ],
+      "summary": "Medtower UG develops soft- and hardware solutions to make tasks in hospitals more transparent and productive.",
+      "projects": [
+        "Medtow Radar - Using IoT to observe and control hospital devices like beds and wheelchairs",
+        "Individual ETL Solutions - Using Apache Flink, Nifi and Node.js to migrate, transform and aggregate medical data"
+      ],
       "location": "Berlin, Berlin, Germany",
       "skills": [
         "JavaScript",
@@ -86,7 +107,9 @@
         "Java",
         "Docker",
         "Git",
-        "AMQP Messaging"
+        "AMQP Messaging",
+        "Apache Nifi",
+        "Apache Flink"
       ]
     },
     {
@@ -94,13 +117,18 @@
       "position": "Software Developer",
       "startDate": "2018-02-28",
       "endDate": "2018-08-31",
-      "highlights": [],
-      "summary": "Development of a B2C web application in an agile (Kanban) team of five developers. Refactoring and adapting the application to become a white label product for better integration in B2B. The application reminds their customers of ending contracts and offers alternatives.\n\nMy Focal Points:\n- Creating the technical concept for the white label product\n- Global themes with SCSS\n- Feature toggles with lazy loading\n- Modular components with React and Flow for flexible use in different contexts\n- Modular and flexible strategy for state management\n- Asynchronus form validation\n- Mentoring of junior and mid-level developers",
+      "highlights": [
+        "Creating the technical concept for the white label product",
+        "Feature toggles with lazy loading",
+        "Modular components with React and Flow for flexible use in different contexts",
+        "Mentoring of junior and mid-level developers"
+      ],
+      "summary": "Development of a B2C web application in an agile (Kanban) team of five developers. Refactoring and adapting the application to become a white label product for better integration in B2B. The application reminds their customers of ending contracts and offers alternatives.",
       "url": "https://www.linkedin.com/company/remindmegmbh/",
       "location": "Berlin und Umgebung, Deutschland",
       "skills": [
         "JavaScript",
-        "TypeScript",
+        "Flow.js",
         "React.js",
         "Jest",
         "REST-API",
@@ -120,8 +148,18 @@
       "position": "Software Developer",
       "startDate": "2009-08-31",
       "endDate": "2018-01-31",
-      "highlights": [],
-      "summary": "Project: PKMS Management\nDesign and implementation of a web application in an agile (Scrum) team of eight developers. The application extracts specific data to optimise working processes in medical institutions.\n\nMy Focal Points:\n- Frontend development with TypeScript, React, Redux and SCSS\n- Interactive charts with D3\n- Module for PDF reports from React components with Java Nashorn\n\nProject: Live Reporting\nArchitecture and implementation of a web application for live reports about patient, bed and staff availability data in hospitals.\n\nMy Focal Points:\n- Development of a web application with Angular.js 1\n- Simulation of the future data development\n- Styling with LESS",
+      "highlights": [
+        "Frontend development with TypeScript, React, Redux and SCSS",
+        "Interactive charts with D3",
+        "Module for PDF reports from React components with Java Nashorn",
+        "Development of a web application with Angular.js 1",
+        "Simulation of the future data development"
+      ],
+      "summary": "Data Warehouse and reporting solutions for health care institutions",
+      "projects": [
+        "PKMS Management - Optimise working processes in health care institutions",
+        "Live Reporting - Live reports about patients, bed and staff availability in health care institutions"
+      ],
       "url": "https://www.linkedin.com/company/cedavis-technology-gmbh/",
       "location": "Berlin und Umgebung, Deutschland",
       "skills": [
@@ -130,6 +168,7 @@
         "React.js",
         "REST-API",
         "CSS",
+        "LESS",
         "Java",
         "Git",
         "Redux"

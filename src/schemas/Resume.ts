@@ -80,6 +80,7 @@ const workSchema = z.object({
   endDate: z.optional(dateStringSchema),
   highlights: z.optional(z.array(z.string())),
   location: z.optional(z.string()),
+  projects: z.optional(z.array(z.string())),
   skills: z.optional(z.array(z.string())),
   url: z.optional(z.string().url()),
 });

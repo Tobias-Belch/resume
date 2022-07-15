@@ -1,0 +1,27 @@
+---
+export type Props = { variant?: "dark" | "light" };
+
+const { variant = "light" } = Astro.props as Props;
+---
+
+<div class={variant}>
+  <slot></slot>
+</div>
+
+<style>
+  div {
+    display: flex;
+    gap: var(--spacing-m);
+    padding: var(--spacing-m) var(--spacing-l);
+  }
+
+  .dark {
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+  }
+
+  .light {
+    background-color: var(--color-highlight);
+    color: var(--color-highlight-contrast);
+  }
+</style>
