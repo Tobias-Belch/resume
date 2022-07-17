@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { string, z } from "zod";
 
 const profileSchema = z.object({
   network: z.string(),
@@ -14,7 +14,7 @@ const summaryObjectSchema = z.object({
 
 type SummaryObject = z.infer<typeof summaryObjectSchema>;
 
-const summarySchema = z.union([z.string(), summaryObjectSchema]);
+const summarySchema = z.string().or(summaryObjectSchema);
 
 export type Summary = z.infer<typeof summarySchema>;
 
@@ -27,7 +27,7 @@ export function isSummaryObject(summary: Summary): summary is SummaryObject {
 const basicsSchema = z.object({
   name: z.string(),
   label: z.string(),
-  summary: z.union([summarySchema, z.array(summarySchema)]),
+  summary: summarySchema.or(z.array(summarySchema)),
   image: z.optional(z.string()),
   url: z.optional(z.string().url()),
   profiles: z.optional(z.array(profileSchema)),
@@ -65,6 +65,18 @@ const languageSchema = z.object({
 
 export type Language = z.infer<typeof languageSchema>;
 
+const projectSchema = z.object({
+  name: z.string(),
+  description: z.optional(z.string()),
+  highlights: z.optional(z.array(z.string())),
+  startDate: dateStringSchema,
+  endDate: z.optional(dateStringSchema),
+  skills: z.optional(z.array(z.string())),
+  url: z.optional(z.string().url()),
+});
+
+export type Project = z.infer<typeof projectSchema>;
+
 const skillSchema = z.object({
   name: z.string(),
   level: z.enum(["beginner", "intermediate", "advanced", "expert"]),
@@ -92,6 +104,7 @@ export const resumeSchema = z.object({
   certificates: z.optional(z.array(certificateSchema)),
   education: z.optional(z.array(educationSchema)),
   languages: z.optional(z.array(languageSchema)),
+  projects: z.optional(z.array(projectSchema)),
   skills: z.optional(z.array(skillSchema)),
   work: z.optional(z.array(workSchema)),
 });

@@ -322,7 +322,28 @@
   ],
   "interests": [],
   "references": [],
-  "projects": [],
+  "projects": [
+    {
+      "name": "Resume",
+      "description": "Delivering my resume build with web technologies, giving me an opportunity to learn and showcase skills, thought and work processes.",
+      "url": "https://github.com/Tobias-Belch/resume",
+      "startDate": "2022-07-10",
+      "endDate": "2022-07-17",
+      "highlights": [
+        "Getting to know astro (https://astro.build/)",
+        "Using a Figma a little bit more in depth",
+        "Practicing architecture documentation"
+      ],
+      "skills": [
+        "TypeScript",
+        "Astro",
+        "JSX",
+        "CSS",
+        "GitHub Actions",
+        "Software Architecture"
+      ]
+    }
+  ],
   "meta": {
     "theme": "kendall",
     "version": "v1.0.0",

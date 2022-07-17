@@ -3,6 +3,7 @@ import Certificate from "@components/resume/Certificate.astro";
 import Education from "@components/resume/Education.astro";
 import Header from "@components/resume/Header.astro";
 import Languages from "@components/resume/Languages.astro";
+import Project from "@components/resume/Project.astro";
 import Skills from "@components/resume/Skills.astro";
 import Summary from "@components/resume/Summary.astro";
 import Work from "@components/resume/Work.astro";
@@ -14,6 +15,7 @@ const {
   certificates,
   education,
   languages,
+  projects,
   skills,
   work,
 } = Astro.props as Props;
@@ -32,6 +34,8 @@ const summaries = Array.isArray(summary) ? summary : [summary];
     {skills && <Skills skills={skills} sortedBy="level" />}
 
     {work?.map((work) => <Work {...work} />)}
+
+    {projects?.map((project) => <Project {...project} />)}
 
     {certificates?.map((certificate) => <Certificate {...certificate} />)}
 
