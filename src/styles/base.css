@@ -13,11 +13,11 @@
   --spacing-m: 0.5rem;
   --spacing-l: 0.75rem;
   --spacing-xl: 1.25rem;
-  --spacing-xxl: 3.5rem;
+  --spacing-xxl: 3rem;
 
   --font-size-s: 14px;
-  --font-size-m: 18px;
-  --font-size-l: 24px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
 
   background-color: var(--color-background);
   color: var(--color-foreground);
