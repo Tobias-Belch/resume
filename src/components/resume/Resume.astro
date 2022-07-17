@@ -1,9 +1,9 @@
 ---
-import Header from "@components/Header.astro";
+import Header from "@components/resume/Header.astro";
+import Skills from "@components/resume/Skills.astro";
+import Summary from "@components/resume/Summary.astro";
+import Work from "@components/resume/Work.astro";
 import { Resume } from "@schemas/Resume";
-import Skills from "./Skills.astro";
-import Summary from "./Summary.astro";
-import Work from "./Work.astro";
 
 export type Props = Resume;
 const {
@@ -16,28 +16,20 @@ const summaries = Array.isArray(summary) ? summary : [summary];
 ---
 
 <main>
-  <div class="sticky-header">
-    <Header {...basics} />
-  </div>
+  <Header {...basics} />
 
   <div class="sections">
     {summaries.map((summary) => <Summary summary={summary} />)}
 
-    {skills && <Skills skills={skills} />}
+    {skills && <Skills skills={skills} sortedBy="level" />}
 
     {work && work.map((work) => <Work {...work} />)}
   </div>
 </main>
 
 <style>
-  .sticky-header {
-    position: fixed;
-    width: 100%;
-  }
-
   .sections {
     padding: var(--spacing-xxl);
-    padding-top: calc(var(--header-height) + var(--spacing-xxl));
     max-width: 900px;
     margin: 0 auto;
     display: flex;
@@ -47,8 +39,7 @@ const summaries = Array.isArray(summary) ? summary : [summary];
 
   @media only screen and (min-width: 990px) {
     .sections {
-      padding: calc(var(--header-height) + var(--spacing-xxl)) 0
-        var(--spacing-xxl) 0;
+      padding: var(--spacing-xxl) 0;
     }
   }
 </style>

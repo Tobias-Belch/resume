@@ -1,6 +1,8 @@
 ---
-import Highlighted from "@components/Highlighted.astro";
-import Section from "@components/Section.astro";
+import Highlighted from "@components/shared/Highlighted.astro";
+import InlineList from "@components/shared/InlineList.astro";
+import List from "@components/shared/List.astro";
+import Section from "@components/shared/Section.astro";
 import { Work } from "@schemas/Resume";
 
 export type Props = Work;
@@ -37,37 +39,36 @@ const workDuration = `${formatDate(startDate)} ⟶ ${
   <pre>{summary}</pre>
 
   {(highlights?.length ?? 0) > 0 && (
-    <div class="list">
-      <div>Highlights</div>
-      <ul>
-        {highlights?.map((highlight) => (
-          <li>{highlight}</li>
-        ))}
-      </ul>
-    </div>
+    <List>
+      <div slot="title" style="font-weight: 600;">
+        Highlights
+      </div>
+      {highlights?.map((highlight) => (
+        <li>{highlight}</li>
+      ))}
+    </List>
   )}
 
   {(projects?.length ?? 0) > 0 && (
-    <div class="list">
-      <div>Projects</div>
-      <ul>
-        {projects?.map((project) => (
-          <li>{project}</li>
-        ))}
-      </ul>
-    </div>
+    <List>
+      <div slot="title" style="font-weight: 600;">
+        Projects
+      </div>
+      {projects?.map((project) => (
+        <li>{project}</li>
+      ))}
+    </List>
   )}
 
   {(skills?.length ?? 0) > 0 && (
-    <div class="inline-list">
-      <span>Skills</span>
+    <InlineList>
+      <div slot="title" style="font-weight: 600;">
+        Skills
+      </div>
       {skills?.map((skill, i) => (
-        <>
-          <span>{skill}</span>
-          {i < skills.length - 1 && <span>•</span>}
-        </>
+        <li style="font-weight: 200;">{skill}</li>
       ))}
-    </div>
+    </InlineList>
   )}
 </Section>
 

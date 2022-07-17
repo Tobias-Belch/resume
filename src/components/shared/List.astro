@@ -1,0 +1,15 @@
+<div class="list">
+  <slot name="title"></slot>
+  <ul>
+    <slot></slot>
+  </ul>
+</div>
+
+<style>
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: var(--spacing-s);
+  }
+</style>
