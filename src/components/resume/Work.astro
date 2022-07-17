@@ -27,10 +27,15 @@ const workDuration = `${formatDate(startDate)} ⟶ ${
 
 <Section>
   <div class="header">
-    <Highlighted variant="dark">
-      <h3 class="position">{position}</h3>
-      <h3>{name}</h3>
-    </Highlighted>
+    <div class="title">
+      <Highlighted variant="dark">
+        <h3>Work</h3>
+      </Highlighted>
+      <Highlighted variant="dark">
+        <h3 class="position">{position}</h3>
+        <h3>{name}</h3>
+      </Highlighted>
+    </div>
     <h4 class="subtitle">
       {workDuration}
     </h4>
@@ -77,7 +82,12 @@ const workDuration = `${formatDate(startDate)} ⟶ ${
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: var(--spacing-s);
+    gap: var(--spacing-m);
+  }
+
+  .title {
+    display: flex;
+    gap: var(--spacing-m);
   }
 
   .position {
