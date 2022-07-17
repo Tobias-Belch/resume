@@ -1,0 +1,41 @@
+---
+import Highlighted from "@components/shared/Highlighted.astro";
+import { Language } from "@schemas/Resume";
+
+export type Props = { languages: Language[] };
+
+const { languages } = Astro.props as Props;
+
+function compareLevel(a: Language, b: Language) {
+  const asNumber = {
+    A: 4,
+    B: 3,
+    C: 2,
+    native: 1,
+  };
+
+  return asNumber[a.fluency] - asNumber[b.fluency];
+}
+
+const normalisedLanguages = [...languages].sort(compareLevel);
+---
+
+<section class="row">
+  {normalisedLanguages.map(({ language, fluency }) => (
+    <Highlighted variant="dark">
+      <h3 class="highlighted">{language}</h3>
+      <h3>{fluency}</h3>
+    </Highlighted>
+  ))}
+</section>
+
+<style>
+  .row {
+    display: flex;
+    column-gap: var(--spacing-xl);
+  }
+
+  .highlighted {
+    color: var(--color-highlight);
+  }
+</style>

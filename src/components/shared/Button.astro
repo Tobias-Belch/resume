@@ -1,0 +1,45 @@
+---
+export type Props = {
+  href: string;
+};
+---
+
+<a class="button" {...Astro.props}>
+  <slot></slot>
+</a>
+
+<style>
+  .button {
+    --shadow-color: rgba(136, 102, 102, 0.4);
+    --shadow-s: var(--spacing-s);
+    --shadow-l: var(--spacing-m);
+    --translate-hover: calc(var(--shadow-s) - var(--shadow-l));
+    --translate-pressed: var(--shadow-s);
+
+    padding: var(--spacing-m) var(--spacing-l);
+    border: solid var(--spacing-s) var(--color-highlight);
+    box-shadow: var(--shadow-s) var(--shadow-s) var(--shadow-color);
+    background-color: var(--color-highlight);
+    color: var(--color-highlight-contrast);
+  }
+
+  .button:hover {
+    box-shadow: var(--shadow-l) var(--shadow-l) var(--shadow-color);
+    transform: translate(var(--translate-hover), var(--translate-hover));
+  }
+
+  .button:focus,
+  .button:active {
+    box-shadow: 0 0;
+    transform: translate(var(--translate-pressed), var(--translate-pressed));
+  }
+
+  @media print {
+    .button {
+      border: none 0;
+      box-shadow: none;
+      background-color: transparent;
+      color: var(--color-link);
+    }
+  }
+</style>

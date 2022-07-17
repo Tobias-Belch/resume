@@ -36,7 +36,7 @@
     {
       "name": "eHealth-Tec GmbH",
       "position": "Technical Lead",
-      "startDate": "2020-04-30",
+      "startDate": "2020-04-15",
       "highlights": [
         "Bulding User Interfaces with React, Next.js and TypeScript",
         "Developing Backend for Frontends as Anti Corruption Layers with Node.js and NestJS",
@@ -74,9 +74,9 @@
     },
     {
       "name": "Medtower UG",
-      "position": "Development Lead",
+      "position": "Head of Engineering",
       "startDate": "2018-09-30",
-      "endDate": "2020-04-30",
+      "endDate": "2020-04-15",
       "highlights": [
         "Driving the architecture and development of Node.js microservices and SPA",
         "Building realtime communication with AMQP 1.0 and Apache Qpid Message Broker",
@@ -184,7 +184,8 @@
       "startDate": "2007-12-31",
       "endDate": "2011-12-31",
       "score": "1,9",
-      "courses": []
+      "courses": [],
+      "summary": "In my thesis I examined program code generation with Evolutonary Algorithms. As a practical example I wrote a software to generate mathematical functions base on input and output values."
     }
   ],
   "awards": [],

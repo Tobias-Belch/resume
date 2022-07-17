@@ -86,10 +86,4 @@ const { name, label, image, profiles = [], url } = Astro.props as Props;
       gap: var(--spacing-s);
     }
   }
-
-  @media print {
-    a::after {
-      content: " (" attr(href) ") ";
-    }
-  }
 </style>

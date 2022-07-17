@@ -1,0 +1,64 @@
+---
+import Button from "@components/shared/Button.astro";
+import Highlighted from "@components/shared/Highlighted.astro";
+import Section from "@components/shared/Section.astro";
+import { Education } from "@schemas/Resume";
+
+export type Props = Education;
+
+const { area, endDate, institution, score, startDate, studyType, summary } =
+  Astro.props as Props;
+
+const formatDate = (dateString?: string) => dateString?.replaceAll("-", "/");
+
+const duration = `${formatDate(startDate)} ⟶ ${
+  formatDate(endDate) ?? "Present"
+}`;
+---
+
+<Section>
+  <div class="header">
+    <div class="title">
+      <Highlighted variant="dark">
+        <h3>Edu</h3>
+      </Highlighted>
+      <Highlighted variant="dark">
+        <h3 class="highlighted">{studyType}</h3>
+        <h3>{area}</h3>
+      </Highlighted>
+    </div>
+    <h4 class="subtitle">
+      <span>{duration}</span><span>{institution}</span>
+    </h4>
+  </div>
+
+  <div><span class="bold">Score</span><span>{score}</span></div>
+
+  <div>{summary}</div>
+</Section>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: var(--spacing-m);
+  }
+
+  .title {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+  }
+
+  .highlighted {
+    color: var(--color-highlight);
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-l);
+    font-weight: 200;
+  }
+</style>
