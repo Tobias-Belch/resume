@@ -34,7 +34,7 @@ const duration = `${formatDate(startDate)} ⟶ ${
 
   <div><span class="bold">Score</span><span>{score}</span></div>
 
-  <div>{summary}</div>
+  <pre>{summary}</pre>
 </Section>
 
 <style>
@@ -60,5 +60,10 @@ const duration = `${formatDate(startDate)} ⟶ ${
     align-items: flex-start;
     gap: var(--spacing-m);
     font-weight: 200;
+  }
+
+  pre {
+    line-height: 1.3;
+    white-space: pre-wrap;
   }
 </style>
