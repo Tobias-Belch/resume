@@ -34,9 +34,36 @@
   },
   "work": [
     {
+      "name": "Made2Flow",
+      "position": "Head of Engineering",
+      "startDate": "2022-12-01",
+      "endDate": "2023-07-31",
+      "highlights": [
+        "Diving deep into the domain of fashion and sustainability",
+        "Building the next generation data model together with the CPO",
+        "Mentoring and onboarding colleagues",
+        "Communicating with business partners and driving the technical integration"
+      ],
+      "summary": "Helping the fashion industry to improve their environmental impact, by making better choices across the whole supply chain.",
+      "url": "https://www.linkedin.com/company/made2flow/",
+      "location": "Berlin, Deutschland",
+      "skills": [
+        "Data Modeling",
+        "Requirements Engineering",
+        "Team Leadership",
+        "TypeScript"
+        "React.js",
+        "Next.js",
+        "NestJS",
+        "Mentoring",
+        "Software Architecture"
+      ]
+    },
+    {
       "name": "eHealth-Tec GmbH",
       "position": "Technical Lead",
       "startDate": "2020-04-15",
+      "endDate": "2022-11-30",
       "highlights": [
         "Bulding User Interfaces with React, Next.js and TypeScript",
         "Developing Backend for Frontends as Anti Corruption Layers with Node.js and NestJS",
