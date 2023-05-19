@@ -13,7 +13,7 @@ const { description, endDate, highlights, name, skills, startDate, url } =
 
 const formatDate = (dateString?: string) => dateString?.replaceAll("-", "/");
 
-const duration = `${formatDate(startDate)} ⟶ ${
+const duration = `${formatDate(startDate)} ⭢ ${
   formatDate(endDate) ?? "Present"
 }`;
 ---
@@ -57,7 +57,7 @@ const duration = `${formatDate(startDate)} ⟶ ${
     </InlineList>
   )}
 
-  {url && <Button href={url}>⟶ Project</Button>}
+  {url && <Button href={url}>⭢ Project</Button>}
 </Section>
 
 <style>
