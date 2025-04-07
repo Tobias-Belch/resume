@@ -13,7 +13,7 @@
       },
       {
         "title": "Hi!",
-        "content": "I'm Tobias, a passionate Software (Web) Developer and Tech Lead since over 13 years. Even though my focus has been the frontend side of web applications, especially using TypeScript and React, I always enjoyed the chance to look beyond that and be more involved in a fullstack scope.\n\nBeyond coding, what I enjoy most, is taking ownership of the critical technical challenges and ensuring that the company vision is reflected in architecture and code, while enabling my team to work as efficiently as they can."
+        "content": "I'm Tobias, a passionate Software (Web) Developer and Tech Lead since over 15 years. Even though my focus has been the frontend side of web applications, especially using TypeScript and React, I always enjoyed the chance to look beyond that and be more involved in a fullstack scope.\n\nBeyond coding, what I enjoy most, is taking ownership of the critical technical challenges and ensuring that the company vision is reflected in architecture and code, while enabling my team to work as efficiently as they can."
       },
       {
         "title": "My Principles",
@@ -33,6 +33,38 @@
     ]
   },
   "work": [
+    {
+      "name": "DocMorris",
+      "position": "Senior Software Engineer",
+      "startDate": "2023-08-01",
+      "highlights": [
+        "Building a next generation online pharmacy with an amazing team",
+        "Researching and implementing technical solutions",
+        "Mentoring and onboarding colleagues",
+        "Migrating a web application to be white-label ready and onboarding multiple brands"
+      ],
+      "summary": "Health in one click, by digitalising the patient - pharmacy relationship in Germany.",
+      "projects": [
+        "White-Label online Pharmacy (TypeScript, React, Next.js, Tailwind CSS, REST)"
+      ],
+      "url": "https://www.linkedin.com/company/docmorris",
+      "location": "Berlin, Deutschland",
+      "skills": [
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Jest",
+        "React Testing Library",
+        "REST-API",
+        "GraphQL",
+        "Mentoring",
+        "Software Architecture",
+        "CSS Modules",
+        "Tailwind CSS",
+        "Git"
+      ]
+    },
     {
       "name": "Made2Flow",
       "position": "Head of Engineering",
@@ -239,7 +271,7 @@
     },
     {
       "name": "TypeScript",
-      "level": "advanced",
+      "level": "expert",
       "keywords": []
     },
     {
@@ -249,7 +281,7 @@
     },
     {
       "name": "Next.js",
-      "level": "intermediate",
+      "level": "expert",
       "keywords": []
     },
     {
@@ -264,7 +296,7 @@
     },
     {
       "name": "Node.js",
-      "level": "intermediate",
+      "level": "expert",
       "keywords": []
     },
     {
@@ -308,6 +340,11 @@
       "keywords": []
     },
     {
+      "name": "Tailwind CSS",
+      "level": "intermediate",
+      "keywords": []
+    },
+    {
       "name": "Java",
       "level": "beginner",
       "keywords": []
@@ -329,12 +366,12 @@
     },
     {
       "name": "Mentoring",
-      "level": "intermediate",
+      "level": "advanced",
       "keywords": []
     },
     {
       "name": "Software Architecture",
-      "level": "intermediate",
+      "level": "advanced",
       "keywords": []
     }
   ],
