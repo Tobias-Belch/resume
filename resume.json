@@ -265,12 +265,7 @@
   "publications": [],
   "skills": [
     {
-      "name": "JavaScript",
-      "level": "expert",
-      "keywords": []
-    },
-    {
-      "name": "TypeScript",
+      "name": "TypeScript & JavaScript",
       "level": "expert",
       "keywords": []
     },
@@ -285,18 +280,8 @@
       "keywords": []
     },
     {
-      "name": "Redux",
-      "level": "intermediate",
-      "keywords": []
-    },
-    {
-      "name": "Material-UI",
-      "level": "intermediate",
-      "keywords": []
-    },
-    {
       "name": "Node.js",
-      "level": "expert",
+      "level": "advanced",
       "keywords": []
     },
     {
@@ -306,7 +291,7 @@
     },
     {
       "name": "REST-API",
-      "level": "intermediate",
+      "level": "advanced",
       "keywords": []
     },
     {
@@ -321,7 +306,7 @@
     },
     {
       "name": "React Testing Library",
-      "level": "intermediate",
+      "level": "advanced",
       "keywords": []
     },
     {
@@ -330,23 +315,18 @@
       "keywords": []
     },
     {
-      "name": "CSS",
-      "level": "advanced",
+      "name": "Playwright",
+      "level": "intermediate",
       "keywords": []
     },
     {
-      "name": "SASS/SCSS",
-      "level": "intermediate",
+      "name": "CSS (modules)",
+      "level": "advanced",
       "keywords": []
     },
     {
       "name": "Tailwind CSS",
       "level": "intermediate",
-      "keywords": []
-    },
-    {
-      "name": "Java",
-      "level": "beginner",
       "keywords": []
     },
     {
@@ -357,11 +337,6 @@
     {
       "name": "Git",
       "level": "intermediate",
-      "keywords": []
-    },
-    {
-      "name": "AMQP Messaging",
-      "level": "beginner",
       "keywords": []
     },
     {
