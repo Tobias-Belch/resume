@@ -26,12 +26,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Get CI workflow run ID
+        id: ci-workflow
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'ci.yml',
+              event: 'push',
+              status: 'success',
+              per_page: 1
+            })
+            return runs.data.workflow_runs[0].id
+
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
           path: .
-          workflow: ci.yml
+          run-id: ${{ steps.ci-workflow.outputs.result }}
 
       - name: Deploy to GitHub Pages
         id: deployment
