@@ -46,7 +46,7 @@ jobs:
         with:
           name: build-artifacts
           path: .
-          run-id: ${{ steps.ci-workflow.outputs.result }}
+          run-id: ${{ github.event.workflow_run.id }}
 
       - name: Deploy to GitHub Pages
         id: deployment
