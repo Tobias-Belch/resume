@@ -22,6 +22,9 @@
     "**/*.{js,ts,astro}": [
       "npm run format",
       "npm run lint"
+    ],
+    "**/*.{yml,yaml}": [
+      "npm run format"
     ]
   },
   "devDependencies": {
