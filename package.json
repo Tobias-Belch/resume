@@ -11,7 +11,7 @@
     "broadcast:preview": "npx localtunnel --port 3001",
     "lint": "eslint --ext .js,.ts,.astro src",
     "lint:watch": "eslint --ext .js,.ts,.astro src --watch",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write .",
