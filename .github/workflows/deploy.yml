@@ -1,56 +1,27 @@
-name: CI/CD Pipeline
+name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [20.x]
-
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run linting
-        run: npm run lint
-
-      - name: Run unit tests
-        run: npm test
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifacts
-          path: |
-            dist
-            node_modules
-
   deploy:
-    needs: test
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    environment:
+      name: production
+      url: https://tobias-belch.github.io/resume/
     permissions:
       contents: write
+      pages: write
+      id-token: write
+
+    outputs:
+      deployment-url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v4
@@ -62,53 +33,8 @@ jobs:
           path: .
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-
-  generate_pdf:
-    needs: deploy
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libgbm-dev wget
-          npm install puppeteer
-      - name: Generate PDF with Puppeteer
-        run: |
-          node -e "
-            const puppeteer = require('puppeteer');
-            (async () => {
-              try {
-                const browser = await puppeteer.launch({
-                  args: ['--no-sandbox', '--disable-setuid-sandbox']
-                });
-                const page = await browser.newPage();
-                await page.goto('https://tobias-belch.github.io/resume/', {
-                  waitUntil: 'networkidle0',
-                  timeout: 30000
-                });
-                await page.pdf({
-                  path: 'resume.pdf',
-                  format: 'A4',
-                  printBackground: true,
-                  margin: { top: '20mm', right: '20mm', bottom: '20mm', left: '20mm' }
-                });
-                await browser.close();
-                console.log('PDF generated from GitHub Pages');
-              } catch (error) {
-                console.error('Error generating PDF:', error);
-                process.exit(1);
-              }
-            })();
-          "
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Add resume.pdf"
-          file_pattern: "resume.pdf"

@@ -1,0 +1,63 @@
+name: "Generate PDF from URL"
+description: "Generates a PDF from a given URL using Puppeteer"
+inputs:
+  url:
+    description: "URL to generate PDF from"
+    required: true
+  output-path:
+    description: "Path to save the generated PDF"
+    required: true
+    default: "output.pdf"
+
+outputs:
+  result:
+    description: "The result of the generation"
+  pdf-path:
+    description: "Path to the generated PDF"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libgbm-dev wget
+        npm install puppeteer
+      env:
+        PUPPETEER_SKIP_DOWNLOAD: "false"
+
+    - name: Generate PDF
+      id: generate
+      shell: bash
+      run: |
+        node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+            try {
+              const browser = await puppeteer.launch({
+                args: ['--no-sandbox', '--disable-setuid-sandbox'],
+                headless: 'new'
+              });
+              const page = await browser.newPage();
+              await page.goto('${{ inputs.url }}', {
+                waitUntil: 'networkidle0',
+                timeout: 30000
+              });
+              await page.pdf({
+                path: '${{ inputs.output-path }}',
+                format: 'A4',
+                printBackground: true,
+                margin: { top: '20mm', right: '20mm', bottom: '20mm', left: '20mm' }
+              });
+              await browser.close();
+              console.log('PDF generated successfully');
+              console.log('::set-output name=result::success');
+              console.log('::set-output name=pdf-path::${{ inputs.output-path }}');
+            } catch (error) {
+              console.error('Error generating PDF:', error);
+              console.log('::set-output name=result::failure');
+              process.exit(1);
+            }
+          })();
+        "
