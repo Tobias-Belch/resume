@@ -1,0 +1,61 @@
+---
+import Certificate from "@components/resume/Certificate.astro";
+import Education from "@components/resume/Education.astro";
+import Header from "@components/resume/Header.astro";
+import Languages from "@components/resume/Languages.astro";
+import Project from "@components/resume/Project.astro";
+import Skills from "@components/resume/Skills.astro";
+import Summary from "@components/resume/Summary.astro";
+import Work from "@components/resume/Work.astro";
+import { Resume } from "@schemas/Resume";
+
+export type Props = Resume;
+const {
+  basics: { summary, ...basics },
+  certificates,
+  education,
+  languages,
+  projects,
+  skills,
+  work,
+} = Astro.props as Props;
+
+const summaries = Array.isArray(summary) ? summary : [summary];
+---
+
+<main>
+  <Header {...basics} />
+
+  <div class="sections">
+    {languages && <Languages languages={languages} />}
+
+    {summaries.map((summary) => <Summary summary={summary} />)}
+
+    {skills && <Skills skills={skills} sortedBy="level" />}
+
+    {work?.map((work) => <Work {...work} />)}
+
+    {projects?.map((project) => <Project {...project} />)}
+
+    {certificates?.map((certificate) => <Certificate {...certificate} />)}
+
+    {education?.map((education) => <Education {...education} />)}
+  </div>
+</main>
+
+<style>
+  .sections {
+    padding: var(--spacing-xxl);
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
+  }
+
+  @media only screen and (min-width: 990px) {
+    .sections {
+      padding: var(--spacing-xxl) 0;
+    }
+  }
+</style>

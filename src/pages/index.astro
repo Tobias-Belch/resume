@@ -1,0 +1,14 @@
+---
+import * as resumeJson from "@root/resume.json";
+import Page from "@layouts/Page.astro";
+import Resume from "@components/resume/Resume.astro";
+import { resumeSchema } from "@schemas/Resume";
+import "@styles/reset.css";
+import "@styles/base.css";
+
+const resume = resumeSchema.parse(resumeJson);
+---
+
+<Page title={resume.basics.name}>
+  <Resume {...resume} />
+</Page>

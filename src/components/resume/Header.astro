@@ -1,0 +1,89 @@
+---
+export interface Props {
+  name: string;
+  label: string;
+  image?: string;
+  profiles?: Profile[];
+  url?: string;
+}
+
+type Profile = {
+  network: string;
+  url: string;
+};
+
+const { name, label, image, profiles = [], url } = Astro.props as Props;
+---
+
+<section class="header">
+  <img alt="Resume Image" src={image} />
+  <div class="content">
+    <div class="title">
+      <h1>{name}</h1>
+      <h4>{label}</h4>
+    </div>
+    <div class="links">
+      {profiles.map(({ network, url }) => <a href={url}>{network}</a>)}
+      {url && <a href={url}>website</a>}
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --header-height: 8rem;
+  }
+
+  .header {
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-s);
+    height: var(--header-height);
+    background-color: var(--color-background);
+  }
+
+  .header > * {
+    height: 100%;
+  }
+
+  .header > .content {
+    flex-grow: 2;
+  }
+
+  .content {
+    background-color: var(--color-highlight);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: var(--spacing-xl);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-m);
+  }
+
+  .title > h1 {
+    font-weight: 700;
+  }
+
+  .title > h4 {
+    font-weight: 500;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    gap: var(--spacing-l);
+  }
+
+  @media only screen and (min-width: 990px) {
+    .links {
+      gap: var(--spacing-s);
+    }
+  }
+</style>

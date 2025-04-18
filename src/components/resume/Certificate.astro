@@ -1,0 +1,55 @@
+---
+import Button from "@components/shared/Button.astro";
+import Highlighted from "@components/shared/Highlighted.astro";
+import Section from "@components/shared/Section.astro";
+import { Certificate } from "@schemas/Resume";
+
+export type Props = Certificate;
+
+const { issuer, name, startDate, url } = Astro.props as Props;
+
+const formatDate = (dateString?: string) => dateString?.replaceAll("-", "/");
+
+const date = formatDate(startDate);
+---
+
+<Section>
+  <div class="header">
+    <div class="title">
+      <Highlighted variant="dark">
+        <h3>Cert</h3>
+      </Highlighted>
+      <Highlighted variant="dark">
+        <h3 class="highlighted">{name}</h3>
+      </Highlighted>
+    </div>
+    <h4 class="subtitle">
+      {date} ⭠ {issuer}
+    </h4>
+  </div>
+
+  {url && <Button href={url}>⭢ Credential</Button>}
+</Section>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: var(--spacing-m);
+  }
+
+  .title {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+  }
+
+  .highlighted {
+    color: var(--color-highlight);
+  }
+
+  .subtitle {
+    font-weight: 200;
+  }
+</style>

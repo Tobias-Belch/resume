@@ -1,0 +1,392 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Tobias Belch",
+    "label": " Tech & Frontend Lead",
+    "image": "resume_image.jpg",
+    "email": "internet.belch@gmx.de",
+    "url": "https://tobias-belch.github.io/resume",
+    "summary": [
+      {
+        "title": "I love my profession!",
+        "content": "I love that I'm pushed to keep on working my skills to produce better products! I love to figure out how to improve the work environment of my teams to make their job easier and their work more efficient! I love to share my experience and benefitting from the experience of others!\n\nWith that out of the way: "
+      },
+      {
+        "title": "Hi!",
+        "content": "I'm Tobias, a passionate Software (Web) Developer and Tech Lead with over 15 years of experience. While I’ve worked across the entire stack, my strength and main focus have been on the frontend — particularly with TypeScript and React. That said, I’ve always been eager to engage with the full breadth of web development, from backend logic to deployment, and enjoy building well-rounded solutions end to end.\n\nBeyond coding, what I enjoy most, is taking ownership of the critical technical challenges and ensuring that the company vision is reflected in architecture and code, while enabling my team to work as efficiently as they can."
+      },
+      {
+        "title": "My Principles",
+        "content": "❶   Communicate respectfully and transperantly\n❷   Have a requirements focused architectual and development process\n❸   Achieve good and maintainable code, based on the architecture, automated testing and the concept of polite code (https://youtu.be/7EmboKQH8lM?t=3160)\n❹   Clear the path of obstacles for the team ⭢ the team is king\n❺   Share knowledge within your team and beyond"
+      }
+    ],
+    "location": {
+      "countryCode": "DE",
+      "address": ""
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "username": "tobias-belch",
+        "url": "https://www.linkedin.com/in/tobias-belch"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "DocMorris",
+      "position": "Senior Software Engineer",
+      "startDate": "2023-08-01",
+      "highlights": [
+        "Building a next generation online pharmacy with an amazing team",
+        "Researching and implementing technical solutions",
+        "Mentoring and onboarding colleagues",
+        "Migrating a web application to be white-label ready and onboarding multiple brands"
+      ],
+      "summary": "Health in one click, by digitalising the patient - pharmacy relationship in Germany.",
+      "projects": [
+        "White-Label online Pharmacy (TypeScript, React, Next.js, Tailwind CSS, REST)"
+      ],
+      "url": "https://www.linkedin.com/company/docmorris",
+      "location": "Berlin, Deutschland",
+      "skills": [
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Jest",
+        "React Testing Library",
+        "REST-API",
+        "GraphQL",
+        "Mentoring",
+        "Software Architecture",
+        "CSS Modules",
+        "Tailwind CSS",
+        "Git"
+      ]
+    },
+    {
+      "name": "Made2Flow",
+      "position": "Head of Engineering",
+      "startDate": "2022-12-01",
+      "endDate": "2023-07-31",
+      "highlights": [
+        "Diving deep into the domain of fashion and sustainability",
+        "Building the next generation data model together with the CPO",
+        "Mentoring and onboarding colleagues",
+        "Communicating with business partners and driving the technical integration"
+      ],
+      "summary": "Helping the fashion industry to improve their environmental impact, by making better choices across the whole supply chain.",
+      "url": "https://www.linkedin.com/company/made2flow/",
+      "location": "Berlin, Deutschland",
+      "skills": [
+        "Data Modeling",
+        "Requirements Engineering",
+        "Mentoring",
+        "Software Architecture",
+        "Team Leadership",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "NestJS",
+        "GraphQL"
+      ]
+    },
+    {
+      "name": "eHealth-Tec GmbH",
+      "position": "Technical Lead",
+      "startDate": "2020-04-15",
+      "endDate": "2022-11-30",
+      "highlights": [
+        "Bulding User Interfaces with React, Next.js and TypeScript",
+        "Developing Backend for Frontends as Anti Corruption Layers with Node.js and NestJS",
+        "Mentoring and onboarding colleagues",
+        "Achieving transparent and efficient communication between the Team and Stakeholders",
+        "Driving a Requirements based Software Architecture and Development process"
+      ],
+      "summary": "Digitalising the german health system, by improving the experience for patients, doctors and pharmacists.",
+      "projects": [
+        "White-Label online Pharmacy (TypeScript, React, Next.js, NestJS, REST)",
+        "Veordnungssoftware (PVS integrated prescription creation) (Software Architecture)",
+        "Browser based e-prescription creation for doctors (TypeScript, React, Material-UI)]"
+      ],
+      "url": "https://www.linkedin.com/company/ehealth-tec/",
+      "location": "Berlin, Deutschland",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Node.js",
+        "Next.js",
+        "NestJS",
+        "Jest",
+        "Cypress",
+        "REST-API",
+        "GraphQL",
+        "Mentoring",
+        "Software Architecture",
+        "Material-UI",
+        "SASS",
+        "Cascading Style Sheets (CSS)",
+        "Docker",
+        "Git"
+      ]
+    },
+    {
+      "name": "Medtower UG",
+      "position": "Head of Engineering",
+      "startDate": "2018-09-30",
+      "endDate": "2020-04-15",
+      "highlights": [
+        "Driving the architecture and development of Node.js microservices and SPA",
+        "Building realtime communication with AMQP 1.0 and Apache Qpid Message Broker",
+        "Providing the geo and map specific information in an offline environment with OpenMapTiles Server",
+        "Mentoring and coaching of coworkers",
+        "Management of the external work of a Apache NIFI consulting company"
+      ],
+      "summary": "Medtower UG develops soft- and hardware solutions to make tasks in hospitals more transparent and productive.",
+      "projects": [
+        "Medtow Radar - Using IoT to observe and control hospital devices like beds and wheelchairs",
+        "Individual ETL Solutions - Using Apache Flink, Nifi and Node.js to migrate, transform and aggregate medical data"
+      ],
+      "location": "Berlin, Berlin, Germany",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Node.js",
+        "NestJS",
+        "Jest",
+        "REST-API",
+        "Mentoring",
+        "Software Architecture",
+        "Material-UI",
+        "Bulma (CSS Framework)",
+        "SASS/SCSS",
+        "CSS",
+        "Java",
+        "Docker",
+        "Git",
+        "AMQP Messaging",
+        "Apache Nifi",
+        "Apache Flink"
+      ]
+    },
+    {
+      "name": "remind me GmbH",
+      "position": "Software Developer",
+      "startDate": "2018-02-28",
+      "endDate": "2018-08-31",
+      "highlights": [
+        "Creating the technical concept for the white label product",
+        "Feature toggles with lazy loading",
+        "Modular components with React and Flow for flexible use in different contexts",
+        "Mentoring of junior and mid-level developers"
+      ],
+      "summary": "Development of a B2C web application in an agile (Kanban) team of five developers. Refactoring and adapting the application to become a white label product for better integration in B2B. The application reminds their customers of ending contracts and offers alternatives.",
+      "url": "https://www.linkedin.com/company/remindmegmbh/",
+      "location": "Berlin und Umgebung, Deutschland",
+      "skills": [
+        "JavaScript",
+        "Flow.js",
+        "React.js",
+        "Jest",
+        "REST-API",
+        "Mentoring",
+        "Software Architecture",
+        "Semantic UI",
+        "Bulma (CSS Framework)",
+        "SASS/SCSS",
+        "CSS",
+        "Docker",
+        "Git",
+        "Redux"
+      ]
+    },
+    {
+      "name": "Cedavis Technology GmbH",
+      "position": "Software Developer",
+      "startDate": "2009-08-31",
+      "endDate": "2018-01-31",
+      "highlights": [
+        "Frontend development with TypeScript, React, Redux and SCSS",
+        "Interactive charts with D3",
+        "Module for PDF reports from React components with Java Nashorn",
+        "Development of a web application with Angular.js 1",
+        "Simulation of the future data development"
+      ],
+      "summary": "Data Warehouse and reporting solutions for health care institutions",
+      "projects": [
+        "PKMS Management - Optimise working processes in health care institutions",
+        "Live Reporting - Live reports about patients, bed and staff availability in health care institutions"
+      ],
+      "url": "https://www.linkedin.com/company/cedavis-technology-gmbh/",
+      "location": "Berlin und Umgebung, Deutschland",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "REST-API",
+        "CSS",
+        "LESS",
+        "Java",
+        "Git",
+        "Redux"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Berlin University of Applied Sciences Berlin (BHT)",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science - BS",
+      "startDate": "2007-12-31",
+      "endDate": "2011-12-31",
+      "score": "1,9",
+      "courses": [],
+      "summary": "In my thesis I examined program code generation with Evolutonary Algorithms. As a practical example I wrote a software to generate mathematical functions, based on input and output values."
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "iSAQB Certified Professional for Software Architecture - Foundation",
+      "issuer": "oose",
+      "startDate": "2022-05-31",
+      "url": "https://skillshub.isqi.org/d0f421f3-0479-4137-b790-0b5c9ed4c499?key=3ad359776fe125ea63c5cfc70742537e81511906255a203875a2e8b1110a130f#gs.5dkuam"
+    },
+    {
+      "name": "Domain Driven Design",
+      "issuer": "entwickler.de",
+      "startDate": "2021-12-31"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "TypeScript & JavaScript",
+      "level": "expert",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "level": "expert",
+      "keywords": []
+    },
+    {
+      "name": "Next.js",
+      "level": "expert",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": "advanced",
+      "keywords": []
+    },
+    {
+      "name": "NestJS",
+      "level": "beginner",
+      "keywords": []
+    },
+    {
+      "name": "REST-API",
+      "level": "advanced",
+      "keywords": []
+    },
+    {
+      "name": "GraphQL",
+      "level": "beginner",
+      "keywords": []
+    },
+    {
+      "name": "Jest",
+      "level": "advanced",
+      "keywords": []
+    },
+    {
+      "name": "React Testing Library",
+      "level": "advanced",
+      "keywords": []
+    },
+    {
+      "name": "Cypress",
+      "level": "intermediate",
+      "keywords": []
+    },
+    {
+      "name": "Playwright",
+      "level": "intermediate",
+      "keywords": []
+    },
+    {
+      "name": "CSS (modules)",
+      "level": "advanced",
+      "keywords": []
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "intermediate",
+      "keywords": []
+    },
+    {
+      "name": "Docker",
+      "level": "intermediate",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "intermediate",
+      "keywords": []
+    },
+    {
+      "name": "Mentoring",
+      "level": "advanced",
+      "keywords": []
+    },
+    {
+      "name": "Software Architecture",
+      "level": "advanced",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "German",
+      "fluency": "native"
+    },
+    {
+      "language": "English",
+      "fluency": "C"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Resume",
+      "description": "Delivering my resume build with web technologies, giving me an opportunity to learn and showcase skills, thought and work processes.",
+      "url": "https://github.com/Tobias-Belch/resume",
+      "startDate": "2022-07-10",
+      "endDate": "2022-07-17",
+      "highlights": [
+        "Getting to know astro (https://astro.build/)",
+        "Using a Figma a little bit more in depth",
+        "Practicing architecture documentation"
+      ],
+      "skills": [
+        "TypeScript",
+        "Astro",
+        "JSX",
+        "CSS",
+        "GitHub Actions",
+        "Software Architecture"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kendall",
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}

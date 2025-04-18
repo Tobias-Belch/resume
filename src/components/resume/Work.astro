@@ -1,0 +1,106 @@
+---
+import Highlighted from "@components/shared/Highlighted.astro";
+import InlineList from "@components/shared/InlineList.astro";
+import List from "@components/shared/List.astro";
+import Section from "@components/shared/Section.astro";
+import { Work } from "@schemas/Resume";
+
+export type Props = Work;
+
+const {
+  endDate,
+  highlights,
+  name,
+  position,
+  projects,
+  skills,
+  startDate,
+  summary,
+} = Astro.props as Props;
+
+const formatDate = (dateString?: string) => dateString?.replaceAll("-", "/");
+
+const workDuration = `${formatDate(startDate)} ⭢ ${
+  formatDate(endDate) ?? "Present"
+}`;
+---
+
+<Section>
+  <div class="header">
+    <div class="title">
+      <Highlighted variant="dark">
+        <h3>Work</h3>
+      </Highlighted>
+      <Highlighted variant="dark">
+        <h3 class="highlighted">{position}</h3>
+        <h3>{name}</h3>
+      </Highlighted>
+    </div>
+    <h4 class="subtitle">
+      {workDuration}
+    </h4>
+  </div>
+
+  <pre>{summary}</pre>
+
+  {(highlights?.length ?? 0) > 0 && (
+    <List>
+      <div slot="title" class="bold">
+        Highlights
+      </div>
+      {highlights?.map((highlight) => (
+        <li>{highlight}</li>
+      ))}
+    </List>
+  )}
+
+  {(projects?.length ?? 0) > 0 && (
+    <List>
+      <div slot="title" class="bold">
+        Projects
+      </div>
+      {projects?.map((project) => (
+        <li>{project}</li>
+      ))}
+    </List>
+  )}
+
+  {(skills?.length ?? 0) > 0 && (
+    <InlineList>
+      <div slot="title" class="bold">
+        Skills
+      </div>
+      {skills?.map((skill, i) => (
+        <li style="font-weight: 200;">{skill}</li>
+      ))}
+    </InlineList>
+  )}
+</Section>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: var(--spacing-m);
+  }
+
+  .title {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+  }
+
+  .highlighted {
+    color: var(--color-highlight);
+  }
+
+  .subtitle {
+    font-weight: 200;
+  }
+
+  pre {
+    line-height: 1.3;
+    white-space: pre-wrap;
+  }
+</style>
