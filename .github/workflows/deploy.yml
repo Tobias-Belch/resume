@@ -47,6 +47,7 @@ jobs:
           name: build-artifacts
           path: .
           run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to GitHub Pages
         id: deployment
