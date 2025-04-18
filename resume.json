@@ -286,7 +286,7 @@
     },
     {
       "name": "NestJS",
-      "level": "beginner",
+      "level": "intermediate",
       "keywords": []
     },
     {
@@ -296,7 +296,7 @@
     },
     {
       "name": "GraphQL",
-      "level": "beginner",
+      "level": "intermediate",
       "keywords": []
     },
     {
@@ -346,7 +346,7 @@
     },
     {
       "name": "Software Architecture",
-      "level": "advanced",
+      "level": "intermediate",
       "keywords": []
     }
   ],

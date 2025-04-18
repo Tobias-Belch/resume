@@ -21,7 +21,7 @@
 
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: Helvetica, Arial, "DejaVu Sans", system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
   font-size: var(--font-size-s);
 }
 
@@ -49,6 +49,10 @@ a {
 }
 
 @media print {
+  * {
+    font-family: "DejaVu Sans";
+  }
+
   a::after {
     content: " (" attr(href) ") ";
   }
