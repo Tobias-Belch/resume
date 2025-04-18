@@ -21,6 +21,9 @@
       "@root/*": ["../*"],
       "@schemas/*": ["schemas/*"],
       "@styles/*": ["styles/*"]
-    }
-  }
+    },
+    // Skip type checking of declaration files
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules"]
 }
