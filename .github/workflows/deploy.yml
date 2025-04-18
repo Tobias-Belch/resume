@@ -66,3 +66,53 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+  generate_pdf:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: .
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgbm-dev wget
+          npm install puppeteer
+      - name: Generate PDF with Puppeteer
+        run: |
+          node -e "
+            const puppeteer = require('puppeteer');
+            (async () => {
+              try {
+                const browser = await puppeteer.launch({
+                  args: ['--no-sandbox', '--disable-setuid-sandbox']
+                });
+                const page = await browser.newPage();
+                await page.goto('file://${{ github.workspace }}/dist/index.html', { 
+                  waitUntil: 'networkidle0',
+                  timeout: 30000
+                });
+                await page.pdf({ 
+                  path: 'resume-puppeteer.pdf',
+                  format: 'A4',
+                  printBackground: true,
+                  margin: { top: '20mm', right: '20mm', bottom: '20mm', left: '20mm' }
+                });
+                await browser.close();
+                console.log('PDF generated successfully');
+              } catch (error) {
+                console.error('Error generating PDF:', error);
+                process.exit(1);
+              }
+            })();
+          "
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Add resume-puppeteer.pdf"
+          file_pattern: "resume-puppeteer.pdf"
