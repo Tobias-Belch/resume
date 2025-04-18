@@ -24,6 +24,7 @@ runs:
         sudo apt-get update
         sudo apt-get install -y libgbm-dev wget fonts-freefont-otf
         npm install puppeteer
+        fc-list
       env:
         PUPPETEER_SKIP_DOWNLOAD: "false"
 
