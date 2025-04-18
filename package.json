@@ -17,8 +17,8 @@
   },
   "lint-staged": {
     "**/*.{js,ts,astro}": [
-      "yarn format",
-      "yarn eslint"
+      "npm run format",
+      "npm run lint"
     ]
   },
   "devDependencies": {
