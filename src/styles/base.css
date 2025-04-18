@@ -21,7 +21,7 @@
 
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: system-ui, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: var(--font-size-s);
 }
 
