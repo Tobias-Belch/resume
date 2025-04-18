@@ -21,8 +21,7 @@
 
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family:
-    "Open Sans", Arial, Helvetica, "Noto Sans", system-ui, sans-serif;
+  font-family: Helvetica, Arial, system-ui, sans-serif;
   font-size: var(--font-size-s);
 }
 
