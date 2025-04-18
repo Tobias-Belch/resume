@@ -7,30 +7,30 @@ export default [
   {
     files: ["**/*.js", "**/*.ts"],
     plugins: {
-      "@typescript-eslint": ts
+      "@typescript-eslint": ts,
     },
     languageOptions: {
-      parser: tsParser
+      parser: tsParser,
     },
     rules: {
       ...ts.configs["eslint-recommended"].overrides[0].rules,
-      ...ts.configs["recommended"].rules
-    }
+      ...ts.configs["recommended"].rules,
+    },
   },
   {
     files: ["**/*.astro"],
     plugins: {
-      astro: astro
+      astro: astro,
     },
     languageOptions: {
       parser: astroParser,
       parserOptions: {
         parser: tsParser,
-        extraFileExtensions: [".astro"]
-      }
+        extraFileExtensions: [".astro"],
+      },
     },
     rules: {
-      ...astro.configs.recommended.rules
-    }
-  }
+      ...astro.configs.recommended.rules,
+    },
+  },
 ];
