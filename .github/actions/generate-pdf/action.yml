@@ -52,11 +52,11 @@ runs:
               });
               await browser.close();
               console.log('PDF generated successfully');
-              console.log('::set-output name=result::success');
-              console.log('::set-output name=pdf-path::${{ inputs.output-path }}');
+              echo "result=success" >> $GITHUB_OUTPUT
+              echo "pdf-path=${{ inputs.output-path }}" >> $GITHUB_OUTPUT
             } catch (error) {
               console.error('Error generating PDF:', error);
-              console.log('::set-output name=result::failure');
+              echo "result=failure" >> $GITHUB_OUTPUT
               process.exit(1);
             }
           })();
