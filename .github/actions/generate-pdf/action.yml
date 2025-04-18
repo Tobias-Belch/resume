@@ -22,7 +22,7 @@ runs:
       shell: bash
       run: |
         sudo apt-get update
-        sudo apt-get install -y libgbm-dev wget
+        sudo apt-get install -y libgbm-dev wget fonts-freefont-ttf
         npm install puppeteer
       env:
         PUPPETEER_SKIP_DOWNLOAD: "false"
