@@ -22,4 +22,10 @@ const { title } = Astro.props as Props;
     align-items: flex-start;
     gap: var(--spacing-xl);
   }
+
+  @media print {
+    .section {
+      page-break-inside: avoid;
+    }
+  }
 </style>

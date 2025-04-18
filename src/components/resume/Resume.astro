@@ -58,4 +58,11 @@ const summaries = Array.isArray(summary) ? summary : [summary];
       padding: var(--spacing-xxl) 0;
     }
   }
+
+  @media print {
+    .sections {
+      max-width: unset;
+      padding: var(--spacing-xxl) 0;
+    }
+  }
 </style>
