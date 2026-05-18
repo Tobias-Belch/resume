@@ -20,6 +20,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate PDFs
+        run: |
+          npm install puppeteer
+          node -e "
+            const puppeteer = require('puppeteer');
+            const fs = require('fs');
+            const path = require('path');
+            (async () => {
+              const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+              const files = fs.readdirSync('resumes').filter(f => f.endsWith('.html'));
+              for (const file of files) {
+                const page = await browser.newPage();
+                await page.emulateMediaType('print');
+                await page.goto('file://' + path.resolve('resumes', file), { waitUntil: 'networkidle0' });
+                await page.pdf({
+                  path: 'resumes/' + file.replace('.html', '.pdf'),
+                  format: 'A4',
+                  printBackground: true
+                });
+                console.log('Generated PDF for', file);
+              }
+              await browser.close();
+            })();
+          "
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
