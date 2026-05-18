@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tobias Belch - Lead/Senior Software Engineer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #d8d8d8;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.45;
+        color: #1a1a1a;
+      }
+
+      main {
+        width: min(780px, 100%);
+        margin: 32px auto;
+        background: #fafafa;
+        padding: 48px 48px 56px;
+      }
+
+      /* ── TOP HEADER ── */
+      .top-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: start;
+        margin-bottom: 36px;
+      }
+
+      .name-block h1 {
+        font-size: 2.6rem;
+        font-weight: 900;
+        line-height: 1.0;
+        letter-spacing: -0.01em;
+        color: #111;
+        margin-bottom: 6px;
+      }
+
+      .name-block .title {
+        font-size: 0.95rem;
+        color: #444;
+        font-weight: 400;
+      }
+
+      .contact-block {
+        text-align: right;
+        color: #333;
+        font-size: 0.82rem;
+        line-height: 1.7;
+      }
+
+      .contact-block a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .contact-block .contact-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+      }
+
+      .contact-block .icon {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      /* ── SECTION HEADINGS ── */
+      h2 {
+        font-size: 1.55rem;
+        font-weight: 900;
+        color: #111;
+        letter-spacing: -0.01em;
+        padding-bottom: 4px;
+        border-bottom: 3px solid #111;
+        margin-bottom: 12px;
+      }
+
+      section {
+        margin-bottom: 28px;
+      }
+
+      /* ── ABOUT ── */
+      .about-text {
+        font-size: 0.83rem;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      /* ── SKILLS ── */
+      .skills-areas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 24px;
+      }
+
+      .skills-area h3 {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+      }
+
+      .skills-area ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skills-area li {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: #222;
+      }
+
+      /* ── ROLES ── */
+      .role {
+        margin-bottom: 20px;
+      }
+
+      .role-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 2px;
+      }
+
+      .role-title {
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      .role-date {
+        font-size: 0.82rem;
+        color: #555;
+        white-space: nowrap;
+      }
+
+      .role-meta {
+        font-size: 0.82rem;
+        color: #444;
+        margin-bottom: 6px;
+      }
+
+      .role-desc {
+        font-size: 0.83rem;
+        color: #333;
+        margin-bottom: 6px;
+        line-height: 1.5;
+      }
+
+      .role ul {
+        margin-left: 16px;
+        padding: 0;
+      }
+
+      .role li {
+        font-size: 0.82rem;
+        color: #333;
+        margin-bottom: 3px;
+        line-height: 1.45;
+      }
+
+      /* ── EDUCATION ── */
+      .edu-entry {
+        margin-bottom: 4px;
+      }
+
+      .edu-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .edu-school {
+        font-weight: 700;
+        font-size: 0.88rem;
+      }
+
+      .edu-year {
+        font-size: 0.82rem;
+        color: #555;
+        white-space: nowrap;
+      }
+
+      .edu-degree {
+        font-size: 0.82rem;
+        color: #444;
+        margin-top: 2px;
+      }
+
+      /* ── EARLIER EXPERIENCE ── */
+      .earlier-role {
+        margin-bottom: 10px;
+        font-size: 0.83rem;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .earlier-role strong {
+        display: block;
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: #111;
+        margin-bottom: 2px;
+      }
+
+      /* ── CERTS ── */
+      .cert-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cert-list li {
+        font-size: 0.83rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          margin: 0;
+          padding: 24px 20px;
+        }
+
+        .top-header {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-block {
+          text-align: left;
+        }
+
+        .contact-block .contact-row {
+          justify-content: flex-start;
+        }
+
+        .skills-areas {
+          grid-template-columns: 1fr;
+          gap: 16px 0;
+        }
+      }
+
+      @media print {
+        body { background: #fff; }
+        main { margin: 0; padding: 0; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <!-- TOP HEADER -->
+      <div class="top-header">
+        <div class="name-block">
+          <h1>Tobias<br>Belch</h1>
+          <p class="title">Lead / Senior Software Engineer</p>
+        </div>
+        <div class="contact-block">
+          <div class="contact-row"><span class="icon">&#8962;</span> Berlin, Germany</div>
+          <div class="contact-row"><span class="icon">&#128241;</span> <a href="https://tobias-belch.github.io/resume">tobias-belch.github.io/resume</a></div>
+          <div class="contact-row"><span class="icon">in</span> <a href="https://www.linkedin.com/in/tobias-belch">linkedin.com/in/tobias-belch</a></div>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section>
+        <h2>about</h2>
+        <p class="about-text">
+          Lead and senior engineer with 15+ years delivering web platforms in healthcare,
+          e-commerce, and sustainability. Combines architecture ownership with hands-on
+          TypeScript, React, and Next.js execution across frontend and backend-for-frontend layers.
+          Strong track record in white-label platform evolution, cross-functional delivery, and
+          mentoring engineers to raise team quality and speed.
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section>
+        <h2>skills</h2>
+        <div class="skills-areas">
+          <div class="skills-area">
+            <h3>Core</h3>
+            <ul>
+              <li>TypeScript / JavaScript</li>
+              <li>React.js / Next.js</li>
+              <li>Frontend Architecture</li>
+              <li>Node.js</li>
+              <li>Technical Leadership</li>
+              <li>Mentoring</li>
+            </ul>
+          </div>
+          <div class="skills-area">
+            <h3>Strong</h3>
+            <ul>
+              <li>Redux / State Mgmt</li>
+              <li>GraphQL / REST APIs</li>
+              <li>Material UI / Tailwind / SCSS</li>
+              <li>Jest / Cypress / Playwright</li>
+              <li>Docker / Git</li>
+            </ul>
+          </div>
+          <div class="skills-area">
+            <h3>Supporting</h3>
+            <ul>
+              <li>NestJS</li>
+              <li>D3 / Data Visualisation</li>
+              <li>AMQP / Apache Flink / NiFi</li>
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE -->
+      <section>
+        <h2>work experience</h2>
+
+        <div class="role">
+          <div class="role-head">
+            <p class="role-title">Senior Software Engineer – DocMorris</p>
+            <p class="role-date">Berlin, Germany | 08/2023 – Present</p>
+          </div>
+          <p class="role-desc">Digital healthcare and online pharmacy platform in the German market.</p>
+          <ul>
+            <li>Shipped core capabilities for a next-generation online pharmacy platform with TypeScript, React, and Next.js.</li>
+            <li>Strengthened frontend architecture and delivery flow in a multi-team setup to improve implementation consistency.</li>
+            <li>Advanced white-label migration to support onboarding of multiple brands on a shared platform foundation.</li>
+            <li>Mentored and onboarded engineers to increase team throughput and code quality.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <p class="role-title">Head of Engineering – Made2Flow</p>
+            <p class="role-date">Berlin, Germany | 12/2022 – 07/2023</p>
+          </div>
+          <p class="role-desc">Sustainability platform for fashion supply-chain decision support.</p>
+          <ul>
+            <li>Defined the next-generation data model with product leadership to support domain-critical workflows.</li>
+            <li>Led integration strategy with external partners and internal stakeholders to reduce delivery risk.</li>
+            <li>Guided architecture and implementation decisions while mentoring and onboarding engineers.</li>
+            <li>Connected domain discovery with engineering execution to speed up product learning cycles.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <p class="role-title">Technical Lead – eHealth-Tec GmbH</p>
+            <p class="role-date">Berlin, Germany | 04/2020 – 11/2022</p>
+          </div>
+          <p class="role-desc">Digital health products for patients, doctors, and pharmacists.</p>
+          <ul>
+            <li>Led React and Next.js delivery with a TypeScript-first architecture for patient and provider-facing products.</li>
+            <li>Implemented BFF services with Node.js and NestJS to protect domain boundaries in external integrations.</li>
+            <li>Improved execution clarity through requirements-driven architecture and predictable development practices.</li>
+            <li>Strengthened engineering and stakeholder alignment through transparent communication and planning.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <p class="role-title">Head of Engineering – Medtower UG</p>
+            <p class="role-date">Berlin, Germany | 09/2018 – 04/2020</p>
+          </div>
+          <p class="role-desc">Software and hardware solutions for hospital operations and visibility.</p>
+          <ul>
+            <li>Directed end-to-end architecture and delivery of Node.js microservices and single-page applications.</li>
+            <li>Built real-time messaging workflows with AMQP and Apache Qpid for operational responsiveness.</li>
+            <li>Delivered offline-capable map and geospatial features using OpenMapTiles infrastructure.</li>
+            <li>Coordinated consulting partners and mentored internal engineers to maintain delivery momentum.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- EARLIER EXPERIENCE -->
+      <section>
+        <h2>earlier experience</h2>
+        <div class="earlier-role">
+          <strong>Software Developer – remind me GmbH</strong>
+          Berlin, Germany | 02/2018 – 08/2018 — White-label B2C web application refactoring, modular React components, mentoring junior developers.
+        </div>
+        <div class="earlier-role">
+          <strong>Software Developer – Cedavis Technology GmbH</strong>
+          Berlin, Germany | 08/2009 – 01/2018 — Reporting and data-warehouse interfaces for healthcare institutions using React, TypeScript, Redux, and D3.
+        </div>
+      </section>
+
+      <!-- LANGUAGES -->
+      <section>
+        <h2>languages</h2>
+        <p style="font-size:0.83rem;color:#333;">German (Native) &nbsp;·&nbsp; English (CEFR C-level)</p>
+      </section>
+
+      <!-- EDUCATION -->
+      <section>
+        <h2>education</h2>
+        <div class="edu-entry">
+          <div class="edu-head">
+            <p class="edu-school">Berlin University of Applied Sciences (BHT)</p>
+            <p class="edu-year">2007 – 2011</p>
+          </div>
+          <p class="edu-degree">Bachelor of Science, Computer Science</p>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section>
+        <h2>certifications</h2>
+        <div class="edu-entry">
+          <div class="edu-head">
+            <p class="edu-school">iSAQB Certified Professional for Software Architecture – Foundation</p>
+            <p class="edu-year">05/2022</p>
+          </div>
+          <p class="edu-degree">oose</p>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-head">
+            <p class="edu-school">Domain Driven Design</p>
+            <p class="edu-year">12/2021</p>
+          </div>
+          <p class="edu-degree">entwickler.de</p>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

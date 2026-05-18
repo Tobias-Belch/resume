@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tobias Belch - CV 09</title>
+    <style>
+      :root {
+        --paper: #ebe6d7;
+        --ink: #7f0f26;
+        --ink-soft: #8f2a3f;
+        --frame: #8d0f2b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(circle at 30% 10%, #b0b0b0 0%, #8b8b8b 40%, #777 100%);
+        font-family: "Aptos", "Segoe UI", sans-serif;
+        color: var(--ink);
+      }
+
+      main {
+        width: min(860px, 100%);
+        margin: 32px auto;
+        padding: 24px;
+      }
+
+      .sheet {
+        position: relative;
+        padding: 2rem 0 0 2rem;
+        background: linear-gradient(90deg, #e6e0d1 0%, #efe9db 56%, #ece4d5 100%);
+        border: 4px solid var(--frame);
+        box-shadow: 0 16px 36px rgba(22, 20, 20, 0.26);
+        overflow: hidden;
+      }
+
+      .sheet::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(107deg, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0.28) 48%, rgba(255, 255, 255, 0) 62%);
+      }
+
+      /*
+        Shared grid: left content col + right rail col.
+        Rows are named to match sections so both columns share the same row height.
+      */
+      .grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows:
+          [header]  auto
+          [profile] auto
+          [skills]  auto
+          [exp]     auto
+          [edu]     auto
+          [lang]    auto
+          [int]     auto;
+        column-gap: 16px;
+      }
+
+      /* ── Left column content cells ── */
+      .sec-header  { grid-column: 1; grid-row: header;  }
+      .sec-profile { grid-column: 1; grid-row: profile; padding-top: 14px; }
+      .sec-skills  { grid-column: 1; grid-row: skills;  padding-top: 12px; }
+      .sec-exp     { grid-column: 1; grid-row: exp;     padding-top: 14px; }
+      .sec-edu     { grid-column: 1; grid-row: edu;     padding-top: 14px; }
+      .sec-lang    { grid-column: 1; grid-row: lang;    padding-top: 14px; }
+      .sec-int     { grid-column: 1; grid-row: int;     padding-top: 14px; padding-bottom: 16px; }
+
+      /* ── Right column rail cells ── */
+      .rail-header  { grid-column: 2; grid-row: header;  text-align: right; }
+      .rail-profile { grid-column: 2; grid-row: profile; display: flex; align-items: flex-start; justify-content: flex-end; padding-top: 14px; }
+      .rail-skills  { grid-column: 2; grid-row: skills;  display: flex; align-items: flex-start; justify-content: flex-end; padding-top: 12px; }
+      .rail-exp     { grid-column: 2; grid-row: exp;     display: flex; align-items: flex-start; justify-content: flex-end; padding-top: 14px; }
+      .rail-edu     { grid-column: 2; grid-row: edu;     display: flex; align-items: flex-start; justify-content: flex-end; padding-top: 14px; }
+      .rail-lang    { grid-column: 2; grid-row: lang;    display: flex; align-items: flex-start; justify-content: flex-end; padding-top: 14px; }
+      .rail-int     { grid-column: 2; grid-row: int;     display: flex; align-items: flex-start; justify-content: flex-end; padding-top: 14px; }
+
+      .rail-label {
+        font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      /* ── Mini text style ── */
+      .mini {
+        font-size: 0.76rem;
+        line-height: 1.24;
+      }
+
+      .mini p {
+        margin: 0 0 4px;
+      }
+
+      .name {
+        margin: 0 0 2px;
+        font-size: 2.1rem;
+        line-height: 1;
+        font-weight: 700;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .job {
+        margin-top: 10px;
+      }
+
+      .job:first-child {
+        margin-top: 0;
+      }
+
+      .job-title {
+        margin: 0;
+        font-size: 0.83rem;
+        font-weight: 700;
+      }
+
+      ul {
+        margin: 4px 0 0 12px;
+        padding: 0;
+      }
+
+      li {
+        margin: 0 0 2px;
+      }
+
+      .role-word {
+        position: relative;
+        z-index: 1;
+        margin: 12px -18px 0;
+        padding: 0 18px;
+        font-size: clamp(4rem, 14vw, 9.5rem);
+        line-height: 0.85;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      @media (max-width: 850px) {
+        main {
+          margin: 0;
+          padding: 0;
+        }
+
+        .sheet {
+          border-width: 3px;
+          border-left: 0;
+          border-right: 0;
+          box-shadow: none;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: none;
+        }
+
+        .sec-header, .sec-profile, .sec-skills, .sec-exp, .sec-edu, .sec-lang, .sec-int {
+          grid-column: 1;
+          grid-row: auto;
+        }
+
+        .rail-header, .rail-profile, .rail-skills, .rail-exp, .rail-edu, .rail-lang, .rail-int {
+          display: none;
+        }
+
+        .name {
+          text-align: left;
+        }
+
+        .role-word {
+          font-size: 3.5rem;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        main {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .sheet {
+          box-shadow: none;
+          border-width: 2px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="sheet">
+        <div class="grid">
+
+          <!-- Header row: contact info left, name right -->
+          <div class="sec-header mini">
+            <p><a href="https://www.linkedin.com/in/tobias-belch">linkedin.com/in/tobias-belch</a></p>
+            <p><a href="https://tobias-belch.github.io/resume">tobias-belch.github.io/resume</a></p>
+            <p><a href="https://github.com/fea17e86">github.com/fea17e86</a></p>
+            <p>Berlin, Germany</p>
+          </div>
+          <div class="rail-header">
+            <p class="name">Tobias Belch</p>
+            <p style="font-size:0.8rem; margin:0 0 2px; text-align:right;">Lead Software Engineer</p>
+            <p style="font-size:0.8rem; margin:0; text-align:right;">Technical Lead</p>
+          </div>
+
+          <!-- Profile row -->
+          <div class="sec-profile mini">
+            <p style="margin:0; max-width:40ch;">
+              Lead and senior engineer with 15+ years delivering web platforms in healthcare, e-commerce, and
+              sustainability. Combines architecture ownership with hands-on TypeScript, React, and Next.js execution.
+            </p>
+          </div>
+          <div class="rail-profile">
+            <span class="rail-label">Profile</span>
+          </div>
+
+          <!-- Skills row -->
+          <div class="sec-skills mini">
+            <div class="split">
+              <div>
+                <p><strong>Core</strong></p>
+                <p>TypeScript</p>
+                <p>JavaScript</p>
+                <p>React.js</p>
+                <p>Next.js</p>
+                <p>Node.js</p>
+              </div>
+              <div>
+                <p><strong>Strong</strong></p>
+                <p>Redux</p>
+                <p>GraphQL</p>
+                <p>REST APIs</p>
+                <p>Jest</p>
+                <p>Cypress</p>
+              </div>
+            </div>
+          </div>
+          <div class="rail-skills">
+            <span class="rail-label">Skills</span>
+          </div>
+
+          <!-- Experience row -->
+          <div class="sec-exp mini">
+            <div class="job">
+              <p class="job-title">Senior Software Engineer, DocMorris</p>
+              <p>2023-present, Berlin</p>
+              <ul>
+                <li>Shipped TypeScript/React/Next.js healthcare platform capabilities.</li>
+                <li>Advanced white-label migration and frontend architecture consistency.</li>
+              </ul>
+            </div>
+            <div class="job">
+              <p class="job-title">Head of Engineering, Made2Flow</p>
+              <p>2022-2023, Berlin</p>
+              <ul>
+                <li>Defined next-generation data model and integration strategy.</li>
+                <li>Mentored engineers and improved delivery predictability.</li>
+              </ul>
+            </div>
+            <div class="job">
+              <p class="job-title">Technical Lead, eHealth-Tec GmbH</p>
+              <p>2020-2022, Berlin</p>
+              <ul>
+                <li>Led React/Next.js delivery and Node.js/Nest.js BFF implementations.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rail-exp">
+            <span class="rail-label">Experience</span>
+          </div>
+
+          <!-- Education row -->
+          <div class="sec-edu mini">
+            <div class="split">
+              <div>
+                <p><strong>Education</strong></p>
+                <p>B.Sc. Computer Science</p>
+                <p>Berlin University of Applied Sciences</p>
+                <p>2007-2011</p>
+              </div>
+              <div>
+                <p><strong>Certifications</strong></p>
+                <p>iSAQB CPSA-F</p>
+                <p>DDD, entwickler.de</p>
+              </div>
+            </div>
+          </div>
+          <div class="rail-edu">
+            <span class="rail-label">Education</span>
+          </div>
+
+          <!-- Languages row -->
+          <div class="sec-lang mini">
+            <p style="margin:0 0 4px;"><strong>Languages</strong></p>
+            <p style="margin:0 0 4px;">German - Native</p>
+            <p style="margin:0;">English - C-level</p>
+          </div>
+          <div class="rail-lang">
+            <span class="rail-label">Languages</span>
+          </div>
+
+          <!-- Interests row -->
+          <div class="sec-int mini">
+            <ul style="margin-left: 12px;">
+              <li>Architecture and system design</li>
+              <li>Mentoring and engineering culture</li>
+              <li>Product engineering and sustainability tech</li>
+            </ul>
+          </div>
+          <div class="rail-int">
+            <span class="rail-label">Interests</span>
+          </div>
+
+        </div>
+        <p class="role-word">Engineer.</p>
+      </div>
+    </main>
+  </body>
+</html>

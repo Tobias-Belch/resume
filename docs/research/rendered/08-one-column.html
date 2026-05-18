@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tobias Belch - CV 08 One Column</title>
+    <style>
+      :root {
+        --paper: #f4f1e6;
+        --ink: #202225;
+        --muted: #4b4f54;
+        --rule: #292d33;
+        --soft: #b8b2a3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Aptos", "Segoe UI", "Trebuchet MS", sans-serif;
+        line-height: 1.25;
+      }
+
+      main {
+        width: min(780px, 100%);
+        margin: 24px auto;
+        padding: 18px 20px;
+      }
+
+      .stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .identity {
+        border-top: 4px solid var(--rule);
+        padding-top: 8px;
+      }
+
+      .identity h1 {
+        margin: 0;
+        font-size: 2.2rem;
+        line-height: 0.9;
+        text-transform: lowercase;
+        letter-spacing: -0.02em;
+      }
+
+      .identity .name {
+        margin-top: 8px;
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+
+      .identity p {
+        margin: 6px 0 0;
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      .identity a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .card {
+        border-top: 4px solid var(--rule);
+        padding-top: 7px;
+      }
+
+      .card h2 {
+        margin: 0;
+        font-size: clamp(2rem, 7.2vw, 3.45rem);
+        letter-spacing: -0.035em;
+        line-height: 0.84;
+        text-transform: lowercase;
+      }
+
+      .entry {
+        margin-top: 8px;
+        padding-top: 7px;
+        border-top: 1px dotted var(--soft);
+      }
+
+      .entry:first-of-type {
+        border-top: 0;
+        padding-top: 1px;
+      }
+
+      .kicker {
+        margin: 0;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #3a3f46;
+      }
+
+      .title {
+        margin: 1px 0 0;
+        font-size: 0.93rem;
+      }
+
+      .body {
+        margin: 3px 0 0;
+        font-size: 0.87rem;
+        color: var(--muted);
+      }
+
+      .split {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      ul {
+        margin: 4px 0 0 14px;
+        padding: 0;
+      }
+
+      li {
+        margin: 2px 0;
+        font-size: 0.86rem;
+      }
+
+      .flat p {
+        margin: 2px 0;
+        font-size: 0.88rem;
+      }
+
+      .small {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      @media print {
+        main {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="stack">
+        <aside class="identity">
+          <h1>cv</h1>
+          <p class="name">Tobias Belch</p>
+          <p>Berlin, Germany</p>
+          <p><a href="https://www.linkedin.com/in/tobias-belch">linkedin.com/in/tobias-belch</a></p>
+          <p><a href="https://tobias-belch.github.io/resume">tobias-belch.github.io/resume</a></p>
+          <p><a href="https://github.com/fea17e86">github.com/fea17e86</a></p>
+          <p class="small">Lead Software Engineer / Technical Lead</p>
+        </aside>
+
+        <article class="card">
+          <h2>work</h2>
+          <div class="entry">
+            <p class="kicker">2023-now</p>
+            <p class="title">Senior Software Engineer, DocMorris</p>
+            <p class="body">TypeScript/React/Next.js platform delivery, frontend architecture, white-label migration.</p>
+          </div>
+          <div class="entry">
+            <p class="kicker">2022-2023</p>
+            <p class="title">Head of Engineering, Made2Flow</p>
+            <p class="body">Data model strategy, partner integration, architecture guidance, team mentoring.</p>
+          </div>
+          <div class="entry">
+            <p class="kicker">2020-2022</p>
+            <p class="title">Technical Lead, eHealth-Tec GmbH</p>
+            <p class="body">React/Next.js technical direction and Node.js/Nest.js BFF implementation.</p>
+          </div>
+          <div class="entry">
+            <p class="kicker">2018-2020</p>
+            <p class="title">Head of Engineering, Medtower UG</p>
+            <p class="body">Node.js microservices, AMQP messaging, geospatial product features.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>education</h2>
+          <div class="entry split">
+            <p class="title">B.Sc. Computer Science</p>
+            <p class="body">2007-2011</p>
+          </div>
+          <p class="body">Berlin University of Applied Sciences (BHT)</p>
+        </article>
+
+        <article class="card">
+          <h2>technical skills</h2>
+          <div class="entry flat">
+            <p><strong>Core:</strong> TypeScript, JavaScript, React.js, Next.js, Node.js</p>
+            <p><strong>Strong:</strong> Redux, GraphQL, REST APIs, Jest, Playwright, Cypress</p>
+            <p><strong>Supporting:</strong> Nest.js, Java, AMQP, Apache Flink, Apache NiFi, D3</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>business skills</h2>
+          <div class="entry flat">
+            <p>Architecture ownership</p>
+            <p>Cross-functional delivery</p>
+            <p>White-label platform strategy</p>
+            <p>Mentoring and onboarding</p>
+            <p>Stakeholder alignment</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>selected impact</h2>
+          <div class="entry">
+            <ul>
+              <li>Raised engineering consistency across multi-team healthcare programs.</li>
+              <li>Improved onboarding and delivery speed through mentoring and clearer architecture.</li>
+              <li>Connected domain discovery with implementation to shorten product learning cycles.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>languages</h2>
+          <div class="entry split">
+            <p class="title">German</p>
+            <p class="body">Native</p>
+          </div>
+          <div class="entry split">
+            <p class="title">English</p>
+            <p class="body">C-level</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>interests</h2>
+          <div class="entry flat">
+            <p>Frontend architecture, product engineering, mentoring, and sustainable systems.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
