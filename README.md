@@ -1,5 +1,5 @@
 # Resume of Tobias Belch
 
-Stores an up to date version of my resume, based on a **[json file](./resume.json)**. It is build with **[astro](./docs/astro.md)**. You can checkout my **[work process](./docs/process.md)** and the **[architecture docs](./docs/architecture.md)**.
+A plain HTML resume deployed to GitHub Pages from the `resumes/` directory. Any push to `main` that touches `resumes/` triggers an automatic deploy to the `gh-pages` branch.
 
 Find the deployed version **[here](https://tobias-belch.github.io/resume/)**.
