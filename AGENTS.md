@@ -1,3 +1,7 @@
+---
+title: 'AGENTS'
+---
+
 ## Documentation
 Apply these rules whenever creating or editing repository documentation files.
 

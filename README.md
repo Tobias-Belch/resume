@@ -1,3 +1,7 @@
+---
+title: 'Resume of Tobias Belch'
+---
+
 # Resume of Tobias Belch
 
 A plain HTML resume deployed to GitHub Pages from the `resumes/` directory. Any push to `main` that touches `resumes/` triggers an automatic deploy to the `gh-pages` branch.
