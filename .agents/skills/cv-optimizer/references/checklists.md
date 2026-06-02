@@ -35,3 +35,18 @@ title: CV Optimizer Checklists
 - Mirrored terms are backed by CV evidence.
 - Language output matches configured language policy.
 - No claim inflation is introduced.
+
+## LinkedIn Checklist
+
+- Baseline evidence comes from pasted CV text, an explicitly referenced file, or `resumes/index.html` by default.
+- HTML baseline extraction ignores CSS, layout mechanics, comments, and print styling.
+- Headline is clear, searchable, seniority-appropriate, and within LinkedIn's 220-character limit.
+- About section is credible, human-readable, not CV-dense, and within LinkedIn's 2,600-character limit.
+- Experience summaries translate CV evidence into concise LinkedIn profile content rather than copying dense CV bullets.
+- Recent roles receive more detail; older roles are compressed unless fuller coverage is requested.
+- Skills recommendations extend or prioritise the user's existing LinkedIn skills rather than removing them by default.
+- Recruiter-search keywords appear naturally and are backed by CV evidence.
+- Weakly evidenced keywords are flagged rather than strengthened.
+- Featured/profile suggestions are practical and supported by available evidence.
+- Output includes a manual update checklist.
+- Direct LinkedIn editing, browser automation, session handling, scraping, and API-based profile updates are not offered.

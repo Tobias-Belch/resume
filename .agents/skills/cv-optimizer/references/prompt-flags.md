@@ -12,6 +12,7 @@ Use these controls when present in user prompts.
 - `structure`: Section order, chronology, compression, heading normalization.
 - `visual`: Theme options and concrete implementation mapping.
 - `full`: Coordinated pass across content, structure, and visual.
+- `linkedin`: LinkedIn profile content generation from the CV baseline.
 
 Default: `full`
 
@@ -24,6 +25,8 @@ Default: `light`
 
 Guardrail: If evidence is weak, soften or warn rather than over-claim.
 
+LinkedIn mode: Applies to headline, About, experience emphasis, skills prioritisation, and recruiter-search keyword strategy.
+
 ## `--rewrite`
 
 - `none`: Critique only.
@@ -33,7 +36,14 @@ Guardrail: If evidence is weak, soften or warn rather than over-claim.
 Default:
 
 - `section` in `full` mode.
+- `section` in `linkedin` mode.
 - `none` in isolated `structure` or `visual` mode unless requested.
+
+LinkedIn mode:
+
+- `none`: Critique, positioning strategy, platform constraints, and keyword notes only.
+- `section`: Produce headline variants, About variants, current/recent role summaries, skills extension guidance, and manual update notes.
+- `full`: Produce a complete LinkedIn Profile Package with fuller role coverage, skills prioritisation, Featured/profile suggestions, and update checklist.
 
 ## `--language`
 
@@ -42,6 +52,8 @@ Default:
 - `match`: Match JD language when JD exists; otherwise fallback to English.
 
 Default: `en`
+
+LinkedIn mode: Applies to generated LinkedIn profile content. Use English unless German or job-description language matching is explicitly requested.
 
 ## `--employer`
 

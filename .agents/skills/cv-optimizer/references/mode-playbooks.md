@@ -58,6 +58,32 @@ Output emphasis:
 - Concrete implementation mapping.
 - Explicit do and do-not rules.
 
+## LinkedIn Mode
+
+Goal: Produce a LinkedIn Profile Package that adapts CV evidence for LinkedIn searchability, human scanability, and manual profile updates.
+
+Checklist:
+
+- Use `resumes/index.html` as the baseline when no CV text or alternate file is supplied.
+- Extract visible resume evidence from the HTML body; ignore CSS, layout mechanics, comments, and print styling.
+- Preserve the CV's evidence and seniority framing while adapting tone, structure, density, and keyword placement for LinkedIn.
+- Produce three headline variants within LinkedIn's 220-character limit: balanced senior engineer, architecture/platform-heavy, and AI/design-system-forward.
+- Produce two About variants within LinkedIn's 2,600-character limit: direct professional and slightly warmer networking.
+- Rewrite experience as concise LinkedIn summaries rather than copied CV bullets.
+- Give current and recent roles the most detail; compress older roles unless `--rewrite full` is requested.
+- Recommend skills to add, prioritise, or emphasise; do not recommend removing existing LinkedIn skills unless explicitly asked.
+- Include recruiter-search keyword notes and flag weakly evidenced terms rather than strengthening them.
+- Include Featured/profile improvement suggestions when supported by available evidence.
+- Include a manual update checklist.
+- State that direct LinkedIn profile editing is not supported; do not offer browser automation, session handling, scraping, or API-based profile updates.
+
+Output emphasis:
+
+- LinkedIn positioning strategy.
+- Ready-to-paste profile content.
+- Searchability and credibility notes.
+- Manual update steps.
+
 ## Full Mode
 
 Goal: Deliver one coordinated optimization pass.
