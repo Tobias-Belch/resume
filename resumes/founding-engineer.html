@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tobias Belch - Lead/Senior Software Engineer</title>
+    <title>Tobias Belch - Founding / Lead Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700;900&family=Plus+Jakarta+Sans:wght@300;400;700;900&display=swap" rel="stylesheet" />
@@ -39,11 +39,10 @@
       /* ── TOP HEADER ── */
       .top-header {
         display: grid;
-        grid-template-columns: 238px 1fr; /* 48px padding + 190px photo */
+        grid-template-columns: 238px 1fr;
         margin-bottom: 36px;
       }
 
-      /* B&W photo: col 1, inset 48px from left */
       .header-photo {
         grid-column: 1;
         grid-row: 1;
@@ -55,7 +54,6 @@
         z-index: 1;
       }
 
-      /* Right group: col 2, flex column aligned to bottom */
       .header-info {
         grid-column: 2;
         grid-row: 1;
@@ -64,7 +62,6 @@
         justify-content: flex-end;
       }
 
-      /* Name */
       .header-name {
         padding: 16px 32px 16px 32px;
         font-size: 2.6rem;
@@ -78,11 +75,10 @@
         font-weight: 900;
       }
 
-      /* Bar: breaks out of col 2 to span full width via negative margin */
       .header-bar {
-        margin-left: -238px; /* pull back over col 1 */
+        margin-left: -238px;
         background: rgba(200, 212, 0, 0.82);
-        padding: 0 48px 0 280px; /* 238px col + 32px name indent + 10px to align with the T */
+        padding: 0 48px 0 280px;
         z-index: 0;
         display: flex;
         align-items: center;
@@ -99,9 +95,8 @@
         color: var(--fg-strong);
       }
 
-      /* Contact */
       .header-contact {
-        padding: 14px 32px 14px 42px; /* 32px indent + 10px to align with the T */
+        padding: 14px 32px 14px 42px;
       }
 
       .contact-row {
@@ -128,7 +123,6 @@
         padding: 0 48px;
       }
 
-      /* ── SECTION HEADINGS ── */
       h2 {
         font-size: 1.55rem;
         font-weight: 900;
@@ -345,7 +339,7 @@
       @media print {
         body { background: #fff; color: #000; }
         main { margin: 0; width: 100%; display: block; }
-        .header-bar { background: #c8d400; } /* solid for print, no opacity */
+        .header-bar { background: #c8d400; }
 
         .page:not(:first-child) {
           break-before: page;
@@ -366,7 +360,7 @@
         <div class="header-info">
           <div class="header-name">Tobias<strong>Belch</strong></div>
           <div class="header-bar">
-            <span class="bar-title">Lead / Senior Software Engineer</span>
+            <span class="bar-title">Founding / Lead Software Engineer</span>
           </div>
           <div class="header-contact">
             <div class="contact-row">
@@ -385,12 +379,7 @@
         <section>
           <h2>about</h2>
           <p class="about-text">
-            Lead and senior engineer with 17 years delivering web platforms in healthcare,
-            e-health commerce, and sustainability. Combines architecture ownership with hands-on
-            TypeScript, React, and Next.js execution across frontend and backend layers.
-            Drives Design System initiatives and AI agent integration. Consistently sought out as a
-            technical reference point across teams — owns stakeholder communication in high-visibility
-            situations and mentors engineers to raise collective quality and delivery speed.
+            Engineer and technical leader with 17 years of building products from whiteboard to production — across healthcare, e-health commerce, and sustainability. Combines architecture ownership with full-stack TypeScript, React, and Next.js delivery. Drives foundational infrastructure — Design Systems, domain models, BFF layers — that enables teams to move faster. Equally comfortable defining product requirements with a CPO, shipping UI, debugging a data pipeline, or leading AI agent initiatives. Trusted stakeholder communicator and engineer mentor in high-visibility, fast-moving environments.
           </p>
         </section>
 
@@ -402,23 +391,23 @@
               <h3>Core</h3>
               <ul>
                 <li>TypeScript / JavaScript</li>
-                <li>React.js / Next.js</li>
+                <li>React / Next.js</li>
                 <li>Frontend Architecture</li>
-                <li>Node.js</li>
+                <li>Node.js / Full-Stack Delivery</li>
                 <li>Technical Leadership</li>
-                <li>Mentoring</li>
+                <li>0-to-1 Product Building</li>
               </ul>
             </div>
             <div class="skills-area">
               <h3>Strong</h3>
               <ul>
-                <li>Redux / State Mgmt</li>
-                <li>GraphQL / REST APIs</li>
+                <li>Redux / State Management</li>
+                <li>GraphQL / REST APIs / BFF</li>
                 <li>Material UI / Tailwind / SCSS</li>
                 <li>Jest / Cypress / Playwright</li>
                 <li>Docker / Git</li>
-                <li>LLM Integration / Prompt Engineering</li>
-                <li>AI Agent Orchestration</li>
+                <li>LLM Integration / AI Agent Orchestration</li>
+                <li>Domain-Driven Design / Architecture</li>
               </ul>
             </div>
             <div class="skills-area">
@@ -427,7 +416,7 @@
                 <li>NestJS</li>
                 <li>D3 / Data Visualisation</li>
                 <li>AMQP / Apache Flink / NiFi</li>
-                <li>Java</li>
+                <li>System Design & Trade-offs</li>
               </ul>
             </div>
           </div>
@@ -444,13 +433,12 @@
             </div>
             <p class="role-desc">Digital healthcare and online pharmacy platform in the German market.</p>
             <ul>
-              <li>Architected and delivered a white-label migration of the pharmacy platform; 3 brands onboarded to date.</li>
-              <li>Drove frontend and BFF architecture evolution, shaping technical direction across the stack.</li>
-              <li>Trusted for stakeholder communication in critical and high-visibility situations.</li>
-              <li>Designed and led implementation of a cross-platform Design System, improving consistency, accessibility, and UX/Dev alignment; structured to enable AI-assisted UI generation.</li>
-              <li>Drove AI agent initiatives across the engineering org — research and optimisation of token usage, reliability, and response predictability.</li>
-              <li>Improved test coverage and accessibility compliance across the frontend codebase.</li>
-              <li>Mentored 5 engineers; onboarded new hires and raised team capability in TypeScript/React best practices.</li>
+              <li>Architected a multi-brand white-label platform — 3 brands on a shared core.</li>
+              <li>Drove frontend and BFF architecture — technical direction, buy-vs-build decisions, cross-team coupling.</li>
+              <li>Designed and built a cross-platform Design System from scratch — improved UX consistency, enabled AI-assisted UI generation.</li>
+              <li>Led AI agent initiatives across the org — tooling research, token optimisation, driving adoption.</li>
+              <li>Mentored 5 engineers and established TypeScript/React practices that raised team velocity and quality.</li>
+              <li>Trusted stakeholder communicator in critical, high-visibility situations.</li>
             </ul>
           </div>
 
@@ -471,9 +459,9 @@
             </div>
             <p class="role-desc">Sustainability platform for fashion supply-chain decision support.</p>
             <ul>
-              <li>Designed a next-generation domain data model from scratch with the CPO, replacing a fragmented model insufficient to support product use cases.</li>
-              <li>Built and led a team of 4 engineers, including hiring 2.</li>
-              <li>Owned technical partner communication and integration planning.</li>
+              <li>Designed a next-generation domain data model from scratch with the CPO, replacing a fragmented model that blocked product use cases.</li>
+              <li>Built and led a team of 4 engineers — hired 2, established engineering processes from scratch.</li>
+              <li>Owned technical partner communication and integration planning end-to-end.</li>
             </ul>
           </div>
 
@@ -484,12 +472,12 @@
             </div>
             <p class="role-desc">Digital health products for patients, doctors, and pharmacists.</p>
             <ul>
-              <li>Built and owned the frontend of a white-label online pharmacy platform serving 2 clients in production (TypeScript, React, Next.js).</li>
-              <li>Designed and implemented Backend-for-Frontend layers as anti-corruption boundaries (Node.js, NestJS).</li>
-              <li>Introduced and evolved a requirements-driven architecture process — replacing ad-hoc design with ADRs, design reviews, and structured refinement.</li>
+              <li>Built and owned the frontend of a white-label online pharmacy platform from inception to production serving 2 clients (TypeScript, React, Next.js).</li>
+              <li>Designed BFF layers as anti-corruption boundaries (Node.js, NestJS) — clean separation between core domain and client-specific surfaces.</li>
+              <li>Introduced a requirements-driven architecture process — replacing ad-hoc design with ADRs, design reviews, and structured refinement.</li>
+              <li>Delivered a gematik-regulated e-prescription tool — navigated regulatory constraints while maintaining velocity.</li>
               <li>Led stakeholder communication and cross-functional alignment for a team of 4 in a Scrum-lite setup.</li>
               <li>Mentored and onboarded engineers; grew team capability in TypeScript, architecture, and testing.</li>
-              <li>Delivered a gematik-regulated browser-based e-prescription tool for physicians.</li>
             </ul>
           </div>
 
@@ -500,10 +488,10 @@
             </div>
             <p class="role-desc">Software and hardware solutions for hospital operations and visibility.</p>
             <ul>
-              <li>Owned architecture and development of a real-time IoT platform — microservices, SPA, and live device tracking (Node.js, React, TypeScript).</li>
-              <li>Designed a multi-device real-time communication system (IoT hardware, server, web browser) using AMQP 1.0 and Apache Qpid.</li>
-              <li>Built 3D indoor multi-floor maps with live device location and status visualisation in an offline environment (OpenMapTiles).</li>
-              <li>Led a team of 2 engineers; established requirements engineering, refinement process, and team knowledge base.</li>
+              <li>Architected a real-time IoT platform — microservices, SPA, live device tracking (Node.js, React, TypeScript).</li>
+              <li>Designed a multi-device real-time communication system (IoT hardware, server, browser) over AMQP 1.0 and Apache Qpid.</li>
+              <li>Built 3D indoor multi-floor maps with live device tracking in an offline environment (OpenMapTiles).</li>
+              <li>Led a team of 2 engineers — established requirements engineering, refinement, and knowledge base from scratch.</li>
               <li>Managed external Apache NiFi consultants for ETL pipeline delivery.</li>
             </ul>
           </div>
@@ -517,7 +505,7 @@
               <span class="earlier-role-title">Software Developer – remind me GmbH</span>
               <span class="earlier-role-date">02/2018 – 08/2018</span>
             </div>
-            <p class="earlier-role-desc">Authored the technical concept for the white-label product transformation — adopted and shipped after tenure. Implemented feature-toggle architecture with lazy loading for flexible multi-context deployment. Mentored junior and mid-level developers in a Kanban team of 5.</p>
+            <p class="earlier-role-desc">Authored the technical concept for transitioning the product to a white-label architecture — concept was adopted and shipped after tenure. Implemented feature-toggle system with lazy loading for flexible multi-context deployment. Mentored junior and mid-level developers in a Kanban team of 5.</p>
           </div>
           <div class="earlier-role">
             <div class="earlier-role-head">
