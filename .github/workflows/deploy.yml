@@ -41,7 +41,7 @@ jobs:
                 await page.emulateMediaType('print');
                 await page.goto('file://' + path.resolve('resumes', file), { waitUntil: 'networkidle0' });
                 await page.pdf({
-                  path: 'resumes/' + file.replace('.html', '.pdf'),
+                  path: 'resumes/' + (file === 'index.html' ? 'cv.tobias-belch.pdf' : 'cv.tobias-belch.' + file.replace('.html', '.pdf')),
                   format: 'A4',
                   printBackground: true
                 });
