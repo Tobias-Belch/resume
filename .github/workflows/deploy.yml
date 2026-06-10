@@ -51,11 +51,26 @@ jobs:
             })();
           "
 
+      - name: Sync pdfs.html with existing PDF files
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const dir = 'resumes';
+            const pdfs = fs.readdirSync(dir)
+              .filter(f => f.endsWith('.pdf'))
+              .sort();
+            const links = pdfs.map(f => '        <li><a href=\"' + f + '\">' + f + '</a></li>').join('\n');
+            const html = '<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>PDF Downloads &ndash; Tobias Belch</title>\n    <style>\n      * { box-sizing: border-box; margin: 0; padding: 0; }\n      body {\n        font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        font-size: 15px;\n        background: #f4f4f4;\n        color: #222;\n        padding: 40px 20px;\n      }\n      main { max-width: 640px; margin: 0 auto; }\n      h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; color: #111; }\n      ul { list-style: none; }\n      li {\n        padding: 10px 14px;\n        background: #fff;\n        border: 1px solid #ddd;\n        border-radius: 6px;\n        margin-bottom: 8px;\n      }\n      li:hover { background: #fafafa; }\n      a { color: #1a73e8; text-decoration: none; }\n      a:hover { text-decoration: underline; }\n    </style>\n  </head>\n  <body>\n    <main>\n      <h1>PDF Downloads</h1>\n      <ul>\n' + links + '\n      </ul>\n    </main>\n  </body>\n</html>\n';
+            fs.writeFileSync(path.join(dir, 'pdfs.html'), html);
+            console.log('Synced pdfs.html with', pdfs.length, 'PDF(s)');
+          "
+
       - name: Commit and push generated PDFs to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resumes/*.pdf
+          git add resumes/*.pdf resumes/pdfs.html
           git diff --cached --quiet || git commit -m "chore: update generated PDFs [skip ci]"
           git push origin main
 
