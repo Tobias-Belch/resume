@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tobias Belch - Lead/Senior Software Engineer</title>
+    <title>Tobias Belch - Engineering Manager</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700;900&family=Plus+Jakarta+Sans:wght@300;400;700;900&display=swap" rel="stylesheet" />
@@ -36,14 +36,12 @@
         padding-bottom: 56px;
       }
 
-      /* ── TOP HEADER ── */
       .top-header {
         display: grid;
-        grid-template-columns: 238px 1fr; /* 48px padding + 190px photo */
+        grid-template-columns: 238px 1fr;
         margin-bottom: 36px;
       }
 
-      /* B&W photo: col 1, inset 48px from left */
       .header-photo {
         grid-column: 1;
         grid-row: 1;
@@ -55,7 +53,6 @@
         z-index: 1;
       }
 
-      /* Right group: col 2, flex column aligned to bottom */
       .header-info {
         grid-column: 2;
         grid-row: 1;
@@ -64,7 +61,6 @@
         justify-content: flex-end;
       }
 
-      /* Name */
       .header-name {
         padding: 16px 32px 16px 32px;
         font-size: 2.6rem;
@@ -78,11 +74,10 @@
         font-weight: 900;
       }
 
-      /* Bar: breaks out of col 2 to span full width via negative margin */
       .header-bar {
-        margin-left: -238px; /* pull back over col 1 */
+        margin-left: -238px;
         background: rgba(200, 212, 0, 0.82);
-        padding: 0 48px 0 280px; /* 238px col + 32px name indent + 10px to align with the T */
+        padding: 0 48px 0 280px;
         z-index: 0;
         display: flex;
         align-items: center;
@@ -99,9 +94,8 @@
         color: var(--fg-strong);
       }
 
-      /* Contact */
       .header-contact {
-        padding: 14px 32px 14px 42px; /* 32px indent + 10px to align with the T */
+        padding: 14px 32px 14px 42px;
       }
 
       .contact-row {
@@ -123,12 +117,10 @@
         font-weight: 300;
       }
 
-      /* ── BODY CONTENT ── */
       .body-content {
         padding: 0 48px;
       }
 
-      /* ── SECTION HEADINGS ── */
       h2 {
         font-size: 1.55rem;
         font-weight: 900;
@@ -143,13 +135,11 @@
         margin-bottom: 32px;
       }
 
-      /* ── ABOUT ── */
       .about-text {
         font-size: 0.83rem;
         line-height: 1.5;
       }
 
-      /* ── SKILLS ── */
       .skills-areas {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -174,7 +164,6 @@
         line-height: 1.6;
       }
 
-      /* ── ROLES ── */
       .role {
         margin-bottom: 24px;
       }
@@ -216,7 +205,6 @@
         line-height: 1.45;
       }
 
-      /* ── EDUCATION ── */
       .edu-entry {
         margin-bottom: 24px;
       }
@@ -247,7 +235,6 @@
         margin-top: 2px;
       }
 
-      /* ── EARLIER EXPERIENCE ── */
       .earlier-role {
         margin-bottom: 24px;
       }
@@ -345,7 +332,7 @@
       @media print {
         body { background: #fff; color: #000; }
         main { margin: 0; width: 100%; display: block; }
-        .header-bar { background: #c8d400; } /* solid for print, no opacity */
+        .header-bar { background: #c8d400; }
 
         .page:not(:first-child) {
           break-before: page;
@@ -366,7 +353,7 @@
         <div class="header-info">
           <div class="header-name">Tobias<strong>Belch</strong></div>
           <div class="header-bar">
-            <span class="bar-title">Lead / Senior Software Engineer</span>
+            <span class="bar-title">Engineering Manager</span>
           </div>
           <div class="header-contact">
             <div class="contact-row">
@@ -385,12 +372,7 @@
         <section>
           <h2>about</h2>
           <p class="about-text">
-            Lead and senior engineer with 17 years delivering web platforms in healthcare,
-            e-health commerce, and sustainability. Combines architecture ownership with hands-on
-            TypeScript, React, and Next.js execution across frontend and backend layers.
-            Drives Design System initiatives and AI agent integration. Consistently sought out as a
-            technical reference point across teams — owns stakeholder communication in high-visibility
-            situations and mentors engineers to raise collective quality and delivery speed.
+            Engineering manager and technical leader with 17 years of experience delivering web platforms across healthcare, e-health commerce, and sustainability. Combines team leadership with hands-on TypeScript, React, and Next.js expertise across frontend and backend layers. Drives engineering organisations through architecture strategy, Design System initiatives, and AI agent integration. Builds and mentors teams, owns stakeholder communication in high-visibility situations, and raises collective delivery quality and velocity.
           </p>
         </section>
 
@@ -399,140 +381,42 @@
           <h2>skills</h2>
           <div class="skills-areas">
             <div class="skills-area">
-              <h3>Core</h3>
+              <h3>Management &amp; Leadership</h3>
               <ul>
-                <li>TypeScript / JavaScript</li>
-                <li>React.js / Next.js</li>
-                <li>Frontend Architecture</li>
-                <li>Node.js</li>
-                <li>Technical Leadership</li>
-                <li>Mentoring</li>
+                <li>Engineering Management</li>
+                <li>Team Building &amp; Hiring</li>
+                <li>Technical Strategy &amp; Architecture</li>
+                <li>Stakeholder Communication</li>
+                <li>Mentoring &amp; Career Development</li>
+                <li>Cross-functional Collaboration</li>
+                <li>Process Improvement (ADRs, Design Reviews)</li>
               </ul>
             </div>
             <div class="skills-area">
-              <h3>Strong</h3>
+              <h3>Technical</h3>
               <ul>
-                <li>Redux / State Mgmt</li>
+                <li>TypeScript / JavaScript</li>
+                <li>React.js / Next.js</li>
+                <li>Node.js / NestJS</li>
                 <li>GraphQL / REST APIs</li>
+                <li>Frontend Architecture &amp; Design Systems</li>
                 <li>Material UI / Tailwind / SCSS</li>
                 <li>Jest / Cypress / Playwright</li>
-                <li>Docker / Git</li>
-                <li>LLM Integration / Prompt Engineering</li>
-                <li>AI Agent Orchestration</li>
+                <li>LLM Integration &amp; AI Agent Orchestration</li>
               </ul>
             </div>
             <div class="skills-area">
               <h3>Supporting</h3>
               <ul>
-                <li>NestJS</li>
+                <li>Redux / State Management</li>
                 <li>D3 / Data Visualisation</li>
+                <li>Docker / Git</li>
                 <li>AMQP / Apache Flink / NiFi</li>
                 <li>Java</li>
               </ul>
             </div>
           </div>
         </section>
-
-        <!-- WORK EXPERIENCE -->
-        <section>
-          <h2>work experience</h2>
-
-          <div class="role">
-            <div class="role-head">
-              <p class="role-title">Senior Software Engineer – DocMorris</p>
-              <p class="role-date">Berlin, Germany | 08/2023 – Present</p>
-            </div>
-            <p class="role-desc">Digital healthcare and online pharmacy platform in the German market.</p>
-            <ul>
-              <li>Architected and delivered a white-label migration of the pharmacy platform; 3 brands onboarded to date.</li>
-              <li>Drove frontend and BFF architecture evolution, shaping technical direction across the stack.</li>
-              <li>Trusted for stakeholder communication in critical and high-visibility situations.</li>
-              <li>Designed and led implementation of a cross-platform Design System, improving consistency, accessibility, and UX/Dev alignment; structured to enable AI-assisted UI generation.</li>
-              <li>Drove AI agent initiatives across the engineering org — research and optimisation of token usage, reliability, and response predictability.</li>
-              <li>Improved test coverage and accessibility compliance across the frontend codebase.</li>
-              <li>Mentored 5 engineers; onboarded new hires and raised team capability in TypeScript/React best practices.</li>
-            </ul>
-          </div>
-
-          </section>
-
-      </div><!-- /body-content page 1 -->
-      </div><!-- /page 1 -->
-
-      <div class="page">
-        <div class="body-content">
-          <section>
-            <h2>work experience</h2>
-
-            <div class="role">
-            <div class="role-head">
-              <p class="role-title">Head of Engineering – Made2Flow</p>
-              <p class="role-date">Berlin, Germany | 12/2022 – 07/2023</p>
-            </div>
-            <p class="role-desc">Sustainability platform for fashion supply-chain decision support.</p>
-            <ul>
-              <li>Designed a next-generation domain data model from scratch with the CPO, replacing a fragmented model insufficient to support product use cases.</li>
-              <li>Built and led a team of 4 engineers, including hiring 2.</li>
-              <li>Owned technical partner communication and integration planning.</li>
-            </ul>
-          </div>
-
-          <div class="role">
-            <div class="role-head">
-              <p class="role-title">Technical Lead – eHealth-Tec GmbH</p>
-              <p class="role-date">Berlin, Germany | 04/2020 – 11/2022</p>
-            </div>
-            <p class="role-desc">Digital health products for patients, doctors, and pharmacists.</p>
-            <ul>
-              <li>Built and owned the frontend of a white-label online pharmacy platform serving 2 clients in production (TypeScript, React, Next.js).</li>
-              <li>Designed and implemented Backend-for-Frontend layers as anti-corruption boundaries (Node.js, NestJS).</li>
-              <li>Introduced and evolved a requirements-driven architecture process — replacing ad-hoc design with ADRs, design reviews, and structured refinement.</li>
-              <li>Led stakeholder communication and cross-functional alignment for a team of 4 in a Scrum-lite setup.</li>
-              <li>Mentored and onboarded engineers; grew team capability in TypeScript, architecture, and testing.</li>
-              <li>Delivered a gematik-regulated browser-based e-prescription tool for physicians.</li>
-            </ul>
-          </div>
-
-          <div class="role">
-            <div class="role-head">
-              <p class="role-title">Head of Engineering – Medtower UG</p>
-              <p class="role-date">Berlin, Germany | 09/2018 – 04/2020</p>
-            </div>
-            <p class="role-desc">Software and hardware solutions for hospital operations and visibility.</p>
-            <ul>
-              <li>Owned architecture and development of a real-time IoT platform — microservices, SPA, and live device tracking (Node.js, React, TypeScript).</li>
-              <li>Designed a multi-device real-time communication system (IoT hardware, server, web browser) using AMQP 1.0 and Apache Qpid.</li>
-              <li>Built 3D indoor multi-floor maps with live device location and status visualisation in an offline environment (OpenMapTiles).</li>
-              <li>Led a team of 2 engineers; established requirements engineering, refinement process, and team knowledge base.</li>
-              <li>Managed external Apache NiFi consultants for ETL pipeline delivery.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- EARLIER EXPERIENCE -->
-        <section>
-          <h2>earlier experience</h2>
-          <div class="earlier-role">
-            <div class="earlier-role-head">
-              <span class="earlier-role-title">Software Developer – remind me GmbH</span>
-              <span class="earlier-role-date">02/2018 – 08/2018</span>
-            </div>
-            <p class="earlier-role-desc">Authored the technical concept for the white-label product transformation — adopted and shipped after tenure. Implemented feature-toggle architecture with lazy loading for flexible multi-context deployment. Mentored junior and mid-level developers in a Kanban team of 5.</p>
-          </div>
-          <div class="earlier-role">
-            <div class="earlier-role-head">
-              <span class="earlier-role-title">Software Developer – Cedavis Technology GmbH</span>
-              <span class="earlier-role-date">08/2009 – 01/2018</span>
-            </div>
-            <p class="earlier-role-desc">Evolved sole ownership of frontend architecture over 9 years — introduced Angular 1, then migrated to React and TypeScript as the stack matured. Built a custom D3 chart component library from scratch. Engineered a PDF reporting module using Java Nashorn to render React components server-side — enabling a single shared codebase for live UI and PDF output. Implemented data simulation and forecasting features for healthcare capacity planning.</p>
-          </div>
-        </section>
-
-        </div><!-- /body-content page 2 -->
-      </div><!-- /page 2 -->
-
-      <div class="page">
-        <div class="body-content">
 
         <!-- LANGUAGES -->
         <section>
@@ -549,6 +433,110 @@
               <p class="edu-year">2007 – 2011</p>
             </div>
             <p class="edu-degree">Bachelor of Science, Computer Science</p>
+          </div>
+        </section>
+
+      </div><!-- /body-content page 1 -->
+      </div><!-- /page 1 -->
+
+      <div class="page">
+        <div class="body-content">
+
+        <!-- WORK EXPERIENCE -->
+        <section>
+          <h2>work experience</h2>
+
+          <div class="role">
+            <div class="role-head">
+              <p class="role-title">Senior Software Engineer – DocMorris</p>
+              <p class="role-date">Berlin, Germany | 08/2023 – Present</p>
+            </div>
+            <p class="role-desc">Digital healthcare and online pharmacy platform serving the German market. €900M+ revenue company.</p>
+            <ul>
+              <li>Architected and delivered a white-label migration of the pharmacy platform; 3 brands onboarded to date, expanding addressable market.</li>
+              <li>Drove frontend and BFF architecture evolution, shaping technical direction across the full stack and influencing cross-team standards.</li>
+              <li>Trusted escalation point for stakeholder communication in critical, high-visibility situations involving product, operations, and external partners.</li>
+              <li>Designed and led implementation of a cross-platform Design System, improving UX/Dev alignment and enabling AI-assisted UI generation at scale.</li>
+              <li>Drove AI agent initiatives across the engineering org — researched and optimised token usage, reliability, and response predictability for production use.</li>
+              <li>Mentored 5 engineers, onboarded new hires, and raised team-wide capability in TypeScript, React, and testing best practices.</li>
+              <li>Improved test coverage and accessibility compliance across the frontend codebase, reducing regression risk.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <p class="role-title">Head of Engineering – Made2Flow</p>
+              <p class="role-date">Berlin, Germany | 12/2022 – 07/2023</p>
+            </div>
+            <p class="role-desc">Sustainability platform for fashion supply-chain decision support. Seed-stage startup.</p>
+            <ul>
+              <li>Built and led a team of 4 engineers, including hiring 2, establishing engineering processes from the ground up.</li>
+              <li>Designed a next-generation domain data model with the CPO, replacing a fragmented model that constrained product use cases.</li>
+              <li>Owned technical partner communication and integration planning, ensuring alignment across external stakeholders.</li>
+              <li>Established engineering workflows, code review practices, and delivery cadence in a fast-paced startup environment.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <p class="role-title">Technical Lead – eHealth-Tec GmbH</p>
+              <p class="role-date">Berlin, Germany | 04/2020 – 11/2022</p>
+            </div>
+            <p class="role-desc">Digital health products for patients, doctors, and pharmacists. Later acquired by DocMorris.</p>
+            <ul>
+              <li>Built and owned the frontend of a white-label online pharmacy platform serving 2 clients in production (TypeScript, React, Next.js).</li>
+              <li>Designed Backend-for-Frontend layers as anti-corruption boundaries, enabling clean domain separation (Node.js, NestJS).</li>
+              <li>Introduced a requirements-driven architecture process — replaced ad-hoc design with ADRs, design reviews, and structured refinement across the team.</li>
+              <li>Led stakeholder communication and cross-functional alignment for a team of 4 in a Scrum-lite setup, bridging product and engineering.</li>
+              <li>Mentored and onboarded engineers, growing team capability in TypeScript, architecture, and testing practices.</li>
+              <li>Delivered a gematik-regulated browser-based e-prescription tool for physicians, navigating strict regulatory requirements.</li>
+            </ul>
+          </div>
+
+        </section>
+
+        </div><!-- /body-content page 2 -->
+      </div><!-- /page 2 -->
+
+      <div class="page">
+        <div class="body-content">
+
+        <!-- MEDTOWER -->
+        <section>
+          <h2>work experience</h2>
+
+          <div class="role">
+            <div class="role-head">
+              <p class="role-title">Head of Engineering – Medtower UG</p>
+              <p class="role-date">Berlin, Germany | 09/2018 – 04/2020</p>
+            </div>
+            <p class="role-desc">Software and hardware solutions for hospital operations and real-time visibility.</p>
+            <ul>
+              <li>Owned architecture and delivery of a real-time IoT platform — microservices, SPA, and live device tracking (Node.js, React, TypeScript).</li>
+              <li>Designed a multi-device real-time communication system (IoT hardware, server, web browser) using AMQP 1.0 and Apache Qpid.</li>
+              <li>Built 3D indoor multi-floor maps with live device location and status visualisation in an offline environment (OpenMapTiles).</li>
+              <li>Led a team of 2 engineers, established requirements engineering, refinement processes, and a team knowledge base.</li>
+              <li>Managed external Apache NiFi consultants for ETL pipeline delivery, balancing internal and external resourcing.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- EARLIER EXPERIENCE -->
+        <section>
+          <h2>earlier experience</h2>
+          <div class="earlier-role">
+            <div class="earlier-role-head">
+              <span class="earlier-role-title">Software Developer – remind me GmbH</span>
+              <span class="earlier-role-date">02/2018 – 08/2018</span>
+            </div>
+            <p class="earlier-role-desc">Authored the technical concept for a white-label product transformation — adopted and shipped after tenure. Implemented feature-toggle architecture with lazy loading for flexible multi-context deployment. Mentored junior and mid-level developers in a Kanban team of 5.</p>
+          </div>
+          <div class="earlier-role">
+            <div class="earlier-role-head">
+              <span class="earlier-role-title">Software Developer – Cedavis Technology GmbH</span>
+              <span class="earlier-role-date">08/2009 – 01/2018</span>
+            </div>
+            <p class="earlier-role-desc">Evolved sole ownership of frontend architecture over 9 years — introduced Angular 1, then migrated to React and TypeScript. Built a custom D3 chart component library from scratch. Engineered a PDF reporting module using Java Nashorn to render React components server-side, enabling a single shared codebase for live UI and PDF output. Implemented data simulation and forecasting features for healthcare capacity planning.</p>
           </div>
         </section>
 
