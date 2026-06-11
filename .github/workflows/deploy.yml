@@ -35,7 +35,7 @@ jobs:
             const path = require('path');
             (async () => {
               const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
-              const files = fs.readdirSync('resumes').filter(f => f.endsWith('.html'));
+              const files = fs.readdirSync('resumes').filter(f => f.endsWith('.html') && f !== 'pdfs.html');
               for (const file of files) {
                 const page = await browser.newPage();
                 await page.emulateMediaType('print');
