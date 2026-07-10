@@ -3,343 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tobias Belch - AI Engineer</title>
+    <title>Tobias Belch - Lead / Senior AI Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700;900&family=Plus+Jakarta+Sans:wght@300;400;700;900&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --bg-page: white;
-        --fg-strong: #1a1a1a;
-        --fg-medium: #2f2f2f;
-        --fg-light: #555555;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: #d8d8d8;
-        font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 13.5px;
-        line-height: 1.45;
-      }
-
-      main {
-        width: min(780px, 100%);
-        margin: 32px auto;
-        background: var(--bg-page);
-        color: var(--fg-medium);
-        padding-bottom: 56px;
-      }
-
-      .top-header {
-        display: grid;
-        grid-template-columns: 238px 1fr;
-        margin-bottom: 36px;
-      }
-
-      .header-photo {
-        grid-column: 1;
-        grid-row: 1;
-        width: 190px;
-        margin-left: 48px;
-        object-fit: cover;
-        object-position: center top;
-        display: block;
-        z-index: 1;
-      }
-
-      .header-info {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-
-      .header-name {
-        padding: 16px 32px 16px 32px;
-        font-size: 2.6rem;
-        font-weight: 300;
-        line-height: 1;
-        letter-spacing: -0.01em;
-        color: var(--fg-strong);
-      }
-
-      .header-name strong {
-        font-weight: 900;
-      }
-
-      .header-bar {
-        margin-left: -238px;
-        background: rgba(200, 212, 0, 0.82);
-        padding: 0 48px 0 280px;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        min-height: 44px;
-        position: relative;
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-
-      .header-bar .bar-title {
-        font-weight: 400;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        color: var(--fg-strong);
-      }
-
-      .header-contact {
-        padding: 14px 32px 14px 42px;
-      }
-
-      .contact-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.82rem;
-        line-height: 1;
-        flex-wrap: wrap;
-      }
-
-      .contact-row a {
-        color: var(--fg-medium);
-        text-decoration: none;
-      }
-
-      .contact-row .sep {
-        color: #999;
-        font-weight: 300;
-      }
-
-      .body-content {
-        padding: 0 48px;
-      }
-
-      h2 {
-        font-size: 1.55rem;
-        font-weight: 900;
-        color: var(--fg-strong);
-        letter-spacing: -0.01em;
-        padding-bottom: 4px;
-        border-bottom: 3px solid var(--fg-strong);
-        margin-bottom: 12px;
-      }
-
-      section:not(:last-child) {
-        margin-bottom: 32px;
-      }
-
-      .about-text {
-        font-size: 0.83rem;
-        line-height: 1.5;
-      }
-
-      .skills-areas {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0 24px;
-      }
-
-      .skills-area h3 {
-        font-size: 0.92rem;
-        font-weight: 700;
-        color: var(--fg-strong);
-        margin-bottom: 8px;
-      }
-
-      .skills-area ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .skills-area li {
-        font-size: 0.85rem;
-        line-height: 1.6;
-      }
-
-      .role {
-        margin-bottom: 24px;
-      }
-
-      .role-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 8px;
-      }
-
-      .role-title {
-        font-weight: 700;
-        font-size: 0.92rem;
-      }
-
-      .role-date {
-        font-size: 0.82rem;
-        color: var(--fg-light);
-        white-space: nowrap;
-      }
-
-      .role-desc {
-        font-size: 0.83rem;
-        margin-bottom: 6px;
-        line-height: 1.5;
-      }
-
-      .role ul {
-        margin-left: 16px;
-        padding: 0;
-      }
-
-      .role li {
-        font-size: 0.82rem;
-        margin-bottom: 3px;
-        line-height: 1.45;
-      }
-
-      .edu-entry {
-        margin-bottom: 24px;
-      }
-
-      .edu-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 8px;
-      }
-
-      .edu-school {
-        font-weight: 700;
-        font-size: 0.88rem;
-      }
-
-      .edu-year {
-        font-size: 0.82rem;
-        color: var(--fg-light);
-        white-space: nowrap;
-      }
-
-      .edu-degree {
-        font-size: 0.82rem;
-        color: var(--fg-light);
-        margin-top: 2px;
-      }
-
-      .earlier-role {
-        margin-bottom: 24px;
-      }
-
-      .earlier-role-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 6px;
-      }
-
-      .earlier-role-title {
-        font-weight: 700;
-        font-size: 0.88rem;
-        color: var(--fg-strong);
-      }
-
-      .earlier-role-date {
-        font-size: 0.82rem;
-        color: var(--fg-light);
-        white-space: nowrap;
-      }
-
-      .earlier-role-desc {
-        font-size: 0.83rem;
-        line-height: 1.5;
-      }
-
-      @media (min-width: 1656px) {
-        body {
-          background: #b0b0b0;
-          padding: 32px 0;
-        }
-
-        main {
-          width: auto;
-          margin: 0;
-          background: transparent;
-          padding-bottom: 0;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, 780px);
-          gap: 32px;
-          justify-content: center;
-        }
-
-        .pages {
-          display: contents;
-        }
-
-        .page {
-          width: 780px;
-          height: 1123px;
-          background: var(--bg-page);
-          color: var(--fg-medium);
-          padding-bottom: 56px;
-          flex-shrink: 0;
-          overflow: hidden;
-        }
-
-        .page:not(:first-child) {
-          padding-top: 48px;
-        }
-      }
-      .cert-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .cert-list li {
-        font-size: 0.83rem;
-        line-height: 1.6;
-      }
-
-      @media (max-width: 640px) {
-        main { margin: 0; }
-
-        .top-header { grid-template-columns: 150px 1fr; }
-
-        .header-photo { width: 130px; margin-left: 20px; }
-
-        .header-name { font-size: 1.7rem; padding-top: 24px; padding-right: 20px; }
-        .header-bar { font-size: 0.8rem; padding-left: 276px; padding-right: 20px; }
-        .header-contact { padding-left: 38px; padding-bottom: 20px; padding-right: 20px; }
-        .body-content { padding: 0 20px; }
-
-        .skills-areas {
-          grid-template-columns: 1fr;
-          gap: 16px 0;
-        }
-      }
-
-      @media print {
-        body { background: #fff; color: #000; }
-        main { margin: 0; width: 100%; display: block; }
-        .header-bar { background: #c8d400; }
-
-        .page:not(:first-child) {
-          break-before: page;
-          padding-top: 48px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
@@ -353,7 +21,7 @@
         <div class="header-info">
           <div class="header-name">Tobias<strong>Belch</strong></div>
           <div class="header-bar">
-            <span class="bar-title">AI Engineer</span>
+            <span class="bar-title">Lead / Senior AI Engineer</span>
           </div>
           <div class="header-contact">
             <div class="contact-row">
@@ -372,15 +40,17 @@
         <section>
           <h2>about</h2>
           <p class="about-text">
-            AI Engineer with 17 years of software engineering experience, the last 2
-            focused on integrating LLMs and AI agents into production healthcare
-            platforms. Bridges AI capabilities with robust full-stack delivery —
-            owns AI agent orchestration, token optimisation, prompt engineering, and
-            data pipeline architecture. Combines deep TypeScript, React, and Node.js
-            expertise with real-time data streaming and visualisation skills built
-            across regulated health, e-commerce, and sustainability domains. Sought
-            out as a technical reference for AI initiatives, stakeholder communication,
-            and mentoring engineers in best practices.
+            Lead and senior engineer with 17 years delivering web platforms in healthcare,
+            e-health commerce, and sustainability — increasingly focused on LLM integration,
+            AI agent orchestration, and AI-powered developer workflows. Combines architecture
+            ownership with hands-on TypeScript, React, and Next.js execution across frontend
+            and backend layers. Drives LLM agent patterns for production workflows, achieving
+            measured 30x token-cost reduction on knowledge-retrieval tasks with
+            schema-validated outputs approaching deterministic reliability. Builds Design
+            Systems engineered from the start for AI-assisted UI generation. Consistently
+            sought as a technical reference across teams — owns stakeholder communication
+            in high-visibility situations and mentors engineers to raise collective quality
+            and delivery speed.
           </p>
         </section>
 
@@ -389,38 +59,62 @@
           <h2>skills</h2>
           <div class="skills-areas">
             <div class="skills-area">
-              <h3>AI / ML</h3>
+              <h3>Core</h3>
               <ul>
-                <li>LLM Integration (OpenAI, Anthropic)</li>
-                <li>AI Agent Orchestration</li>
-                <li>Prompt Engineering &amp; Optimisation</li>
-                <li>AI-Assisted UI Generation</li>
-                <li>Token Usage &amp; Reliability Tuning</li>
+                <li>TypeScript / JavaScript</li>
+                <li>React.js / Next.js / Node.js</li>
+                <li>Frontend &amp; Platform Architecture</li>
+                <li>Technical Leadership &amp; Mentoring</li>
+                <li>Design Systems</li>
               </ul>
             </div>
             <div class="skills-area">
-              <h3>Data &amp; Streaming</h3>
+              <h3>AI &amp; LLM</h3>
               <ul>
-                <li>Apache Flink / Apache NiFi</li>
-                <li>Real-Time Data Pipelines</li>
-                <li>AMQP / Message Brokers</li>
-                <li>D3 / Data Visualisation</li>
-                <li>Data Modelling &amp; Simulation</li>
+                <li>LLM Integration &amp; Agent Orchestration</li>
+                <li>Prompt Engineering / Schema Validation</li>
+                <li>AI-Assisted UI Generation</li>
+                <li>Knowledge-Retrieval Pipelines</li>
+                <li>Structured LLM Outputs</li>
               </ul>
             </div>
             <div class="skills-area">
               <h3>Engineering</h3>
               <ul>
-                <li>TypeScript / JavaScript</li>
-                <li>React / Next.js / Node.js</li>
-                <li>REST / GraphQL API Design</li>
-                <li>NestJS / BFF Architecture</li>
-                <li>Docker / CI/CD</li>
-                <li>Architecture Decision Records</li>
+                <li>GraphQL / REST APIs / BFF</li>
+                <li>State Management (Redux)</li>
+                <li>Material UI / Tailwind / SCSS</li>
+                <li>Jest / Cypress / Playwright</li>
+                <li>Docker / Git</li>
+                <li>NestJS / D3 / AMQP</li>
               </ul>
             </div>
           </div>
         </section>
+
+        <!-- LANGUAGES -->
+        <section>
+          <h2>languages</h2>
+          <p style="font-size:0.82rem;color:var(--fg-medium);">German (Native) &nbsp;·&nbsp; English (CEFR C-level)</p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+          <h2>education</h2>
+          <div class="edu-entry">
+            <div class="edu-head">
+              <span class="edu-school">Berlin University of Applied Sciences (BHT)</span>
+              <span class="edu-year">2007 – 2011</span>
+            </div>
+            <p class="edu-degree">Bachelor of Science, Computer Science</p>
+          </div>
+        </section>
+
+      </div><!-- /body-content page 1 -->
+      </div><!-- /page 1 -->
+
+      <div class="page">
+        <div class="body-content">
 
         <!-- WORK EXPERIENCE -->
         <section>
@@ -428,23 +122,56 @@
 
           <div class="role">
             <div class="role-head">
-              <p class="role-title">Senior Software Engineer – DocMorris</p>
-              <p class="role-date">Berlin, Germany | 08/2023 – Present</p>
+              <span class="role-title">Senior Software Engineer – DocMorris</span>
+              <span class="role-date">Berlin, Germany | 08/2023 – Present</span>
             </div>
             <p class="role-desc">Digital healthcare and online pharmacy platform in the German market.</p>
             <ul>
-              <li>Led AI agent initiatives across the engineering org — researched token usage, reliability, and response predictability for LLM-powered features.</li>
-              <li>Designed and implemented a cross-platform Design System structured explicitly for AI-assisted UI generation, enabling rapid component creation via LLM prompting.</li>
-              <li>Architected a white-label platform migration with 3 brands onboarded; drove frontend and BFF architecture evolution.</li>
-              <li>Advised on AI integration strategy, evaluating model providers, prompt patterns, and cost/quality trade-offs for production use cases.</li>
-              <li>Mentored 5 engineers on TypeScript, React, and AI-adjacent engineering practices.</li>
+              <li>Established LLM agent patterns for product creation workflows — piloted within own team, then packaged and handed to 3 additional teams. Achieved 30x token-cost reduction on knowledge-retrieval tasks with schema-validated outputs approaching deterministic reliability.</li>
+              <li>Designed and led implementation of a cross-platform Design System (~30–40 components), structured from day one to enable AI-assisted UI generation. Projected to halve design time, eliminate handover overhead, and reduce implementation effort by an estimated 80% through AI-powered component assembly.</li>
+              <li>Led white-label monolith-to-multi-tenant migration. Onboarded 3 brands across 11M active users with ~90% code reuse; second tenant launched in 2 months vs. an estimated 2 years without the white-label architecture — a ~92% time reduction. Refactoring improved testability and maintainability over the original monolith.</li>
+              <li>Drove frontend and BFF architecture evolution, shaping technical direction across the stack.</li>
+              <li>Mentored 5 of 15 engineers through a structured program of 1:1s, pair programming, and weekly education sessions. One bootcamp-graduate engineer promoted to mid-level within 2 years and to senior within 4 — an estimated 2-year acceleration vs. industry average.</li>
+              <li>Trusted for stakeholder communication in critical and high-visibility situations.</li>
+              <li>Improved test coverage and accessibility compliance across the frontend codebase.</li>
+            </ul>
+          </div>
+
+          <!-- Made2Flow -->
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">Head of Engineering – Made2Flow</span>
+              <span class="role-date">Berlin, Germany | 12/2022 – 07/2023</span>
+            </div>
+            <p class="role-desc">Sustainability platform for fashion supply-chain decision support.</p>
+            <ul>
+              <li>Co-designed a next-generation domain data model with the CPO, replacing an MVP-stage model that blocked ~30 business cases. Delivered the redesign in 6 months alongside other responsibilities, directly unblocking several client-deals that were pending the transformation.</li>
+              <li>Built and led a team of 4 engineers, hiring 2 within 2 months — including one of the strongest engineers I've worked with, who remains a key contributor. Established domain documentation and refinement processes that closed a gap between business goals and implementation, eliminating recurring friction.</li>
+              <li>Owned technical partner communication and integration planning.</li>
+            </ul>
+          </div>
+
+          <!-- eHealth-Tec -->
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">Technical Lead – eHealth-Tec GmbH</span>
+              <span class="role-date">Berlin, Germany | 04/2020 – 11/2022</span>
+            </div>
+            <p class="role-desc">Digital health products for patients, doctors, and pharmacists.</p>
+            <ul>
+              <li>Replaced ad-hoc architecture decisions — where proposals were lost and arbitrary shifts caused chaos — with a structured ADR and design review process (~15–20 ADRs). Accelerated decision-making, improved codebase stability and maintainability, and reduced onboarding time for new engineers. Process still active 5 years on.</li>
+              <li>Architected BFF layers insulating the frontend (~11M users) from restructuring across ~20 backend services. Eliminated ripple-effect changes on the frontend whenever backend services were migrated or replaced, and provided the architectural seam for white-label tenant differentiation.</li>
+              <li>Built and owned the frontend of a white-label online pharmacy platform serving 2 clients in production (TypeScript, React, Next.js).</li>
+              <li>Led stakeholder communication and cross-functional alignment for a team of 4 in a Scrum-lite setup.</li>
+              <li>Mentored and onboarded engineers; grew team capability in TypeScript, architecture, and testing.</li>
+              <li>Delivered a gematik-regulated browser-based e-prescription tool for physicians.</li>
             </ul>
           </div>
 
           </section>
 
-      </div><!-- /body-content page 1 -->
-      </div><!-- /page 1 -->
+      </div><!-- /body-content page 2 -->
+      </div><!-- /page 2 -->
 
       <div class="page">
         <div class="body-content">
@@ -453,42 +180,16 @@
 
             <div class="role">
             <div class="role-head">
-              <p class="role-title">Head of Engineering – Made2Flow</p>
-              <p class="role-date">Berlin, Germany | 12/2022 – 07/2023</p>
-            </div>
-            <p class="role-desc">Sustainability platform for fashion supply-chain decision support.</p>
-            <ul>
-              <li>Designed a next-generation domain data model from scratch with the CPO, replacing a fragmented model insufficient to support data-intensive product use cases.</li>
-              <li>Built and led a team of 4 engineers, including hiring 2; owned technical partner communication and integration planning.</li>
-              <li>Evaluated data pipeline and analytics architecture to support decision-support features.</li>
-            </ul>
-          </div>
-
-          <div class="role">
-            <div class="role-head">
-              <p class="role-title">Technical Lead – eHealth-Tec GmbH</p>
-              <p class="role-date">Berlin, Germany | 04/2020 – 11/2022</p>
-            </div>
-            <p class="role-desc">Digital health products for patients, doctors, and pharmacists.</p>
-            <ul>
-              <li>Built and owned the frontend and BFF layers of a white-label online pharmacy platform serving 2 clients in production (TypeScript, React, Next.js, NestJS).</li>
-              <li>Designed Backend-for-Frontend layers as anti-corruption boundaries, shaping API contracts for downstream data consumers.</li>
-              <li>Introduced a requirements-driven architecture process — ADRs, design reviews, and structured refinement — laying groundwork for data-informed technical decisions.</li>
-              <li>Delivered a gematik-regulated browser-based e-prescription tool, navigating strict compliance and data privacy requirements.</li>
-            </ul>
-          </div>
-
-          <div class="role">
-            <div class="role-head">
-              <p class="role-title">Head of Engineering – Medtower UG</p>
-              <p class="role-date">Berlin, Germany | 09/2018 – 04/2020</p>
+              <span class="role-title">Head of Engineering – Medtower UG</span>
+              <span class="role-date">Berlin, Germany | 09/2018 – 04/2020</span>
             </div>
             <p class="role-desc">Software and hardware solutions for hospital operations and visibility.</p>
             <ul>
-              <li>Owned architecture of a real-time IoT platform — microservices, SPA, and live device tracking (Node.js, React, TypeScript).</li>
-              <li>Designed a multi-device real-time communication system using AMQP 1.0 and Apache Qpid for streaming device telemetry.</li>
-              <li>Built 3D indoor maps with live device location and status visualisation in an offline environment (OpenMapTiles, D3).</li>
-              <li>Managed external Apache NiFi consultants for ETL data pipeline delivery.</li>
+              <li>Architected a real-time distributed communication system using AMQP 1.0 / Apache Qpid where IoT hardware, servers, and web browsers operated as peers via pub/sub — eliminating point-to-point integration complexity and simplifying distributed system reasoning, monitoring, and debugging. The protocol's finance-sector provenance ensured the uptime and reliability required in a hospital environment. This was the core infrastructure enabling all product use cases.</li>
+              <li>Built 3D indoor multi-floor maps with live device location for hospital equipment tracking (beds, wheelchairs, devices), including indoor navigation and reporting views. Entire system operated in an offline hospital intranet — no internet access — requiring fully self-contained tile serving and real-time updates.</li>
+              <li>Managed an external Apache NiFi consultant for client-specific ETL pipelines. Within 2 weeks of engagement, the output enabled the team to build business cases — demonstrating rapid time-to-value from the ETL infrastructure.</li>
+              <li>Owned architecture and development of a real-time IoT platform — microservices, SPA, and live device tracking (Node.js, React, TypeScript).</li>
+              <li>Led a team of 2 engineers; established requirements engineering, refinement process, and team knowledge base.</li>
             </ul>
           </div>
         </section>
@@ -501,38 +202,14 @@
               <span class="earlier-role-title">Software Developer – remind me GmbH</span>
               <span class="earlier-role-date">02/2018 – 08/2018</span>
             </div>
-            <p class="earlier-role-desc">Authored the technical concept for a white-label product transformation. Implemented feature-toggle architecture with lazy loading for flexible multi-context deployment. Mentored developers in a Kanban team of 5.</p>
+            <p class="earlier-role-desc">Authored the technical concept for the white-label product transformation — adopted and shipped after tenure. Implemented feature-toggle architecture with lazy loading for flexible multi-context deployment. Mentored junior and mid-level developers in a Kanban team of 5.</p>
           </div>
           <div class="earlier-role">
             <div class="earlier-role-head">
               <span class="earlier-role-title">Software Developer – Cedavis Technology GmbH</span>
               <span class="earlier-role-date">08/2009 – 01/2018</span>
             </div>
-            <p class="earlier-role-desc">Evolved frontend architecture over 9 years — introduced Angular 1, then migrated to React and TypeScript. Built a custom D3 chart component library from scratch. Implemented data simulation and forecasting features for healthcare capacity planning. Engineered a PDF reporting module using Java Nashorn to render React components server-side.</p>
-          </div>
-        </section>
-
-        </div><!-- /body-content page 2 -->
-      </div><!-- /page 2 -->
-
-      <div class="page">
-        <div class="body-content">
-
-        <!-- LANGUAGES -->
-        <section>
-          <h2>languages</h2>
-          <p style="font-size:0.83rem;color:#333;">German (Native) &nbsp;·&nbsp; English (CEFR C-level)</p>
-        </section>
-
-        <!-- EDUCATION -->
-        <section>
-          <h2>education</h2>
-          <div class="edu-entry">
-            <div class="edu-head">
-              <p class="edu-school">Berlin University of Applied Sciences (BHT)</p>
-              <p class="edu-year">2007 – 2011</p>
-            </div>
-            <p class="edu-degree">Bachelor of Science, Computer Science</p>
+            <p class="earlier-role-desc">Evolved sole ownership of frontend architecture over 9 years — introduced Angular 1, then migrated to React and TypeScript as the stack matured. Built a custom D3 chart component library from scratch. Engineered a PDF reporting module using Java Nashorn to render React components server-side — enabling a single shared codebase for live UI and PDF output. Implemented data simulation and forecasting features for healthcare capacity planning.</p>
           </div>
         </section>
 
@@ -541,15 +218,15 @@
           <h2>certifications</h2>
           <div class="edu-entry">
             <div class="edu-head">
-              <p class="edu-school">iSAQB Certified Professional for Software Architecture – Foundation</p>
-              <p class="edu-year">05/2022</p>
+              <span class="edu-school">iSAQB Certified Professional for Software Architecture – Foundation</span>
+              <span class="edu-year">05/2022</span>
             </div>
             <p class="edu-degree">oose</p>
           </div>
           <div class="edu-entry">
             <div class="edu-head">
-              <p class="edu-school">Domain Driven Design</p>
-              <p class="edu-year">12/2021</p>
+              <span class="edu-school">Domain Driven Design</span>
+              <span class="edu-year">12/2021</span>
             </div>
             <p class="edu-degree">entwickler.de</p>
           </div>
