@@ -339,6 +339,11 @@ section:not(:last-child) {
   main { margin: 0; width: 100%; display: block; }
   .header-bar { background: #c8d400; }
 
+  .page {
+    height: auto;
+    overflow: visible;
+  }
+
   .page:not(:first-child) {
     break-before: page;
     padding-top: 48px;
